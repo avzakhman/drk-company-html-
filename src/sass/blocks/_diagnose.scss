@@ -1,0 +1,444 @@
+.diagnose {
+    position: relative;
+    margin-top: 70px;
+    width: 100%;
+    background: url(../img/background.png) center / cover no-repeat;
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 740px;
+    }
+    &__descr {
+        max-width: 485px;
+        min-height: 235px;
+        color: white;
+        h2 {
+            font-size: 44px;
+            font-weight: 500;
+            letter-spacing: 1.3px;
+        }
+        p {
+            margin-top: 20px;
+            line-height: 150%;
+            font-size: 24px;
+            letter-spacing: 0.4px;
+            font-weight: 400;
+        }
+    }
+    &__window {
+        z-index: 12;
+        width: 400px;
+        height: 600px;
+        background-color: #fff;
+        border-radius: 5px;
+        margin-right: 40px;
+        padding: 71px 50px 60px 50px;
+        h3 {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 21px;
+            letter-spacing: 0.5px;
+
+        }
+    }
+}
+
+.diagnose-form {
+    display: grid;
+    flex-direction: column;
+    &__choice {
+        display: none;
+    }
+    &__circle {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        border: 2px solid $button1;
+        border-radius: 100%;
+        right: 6px;
+        top: 6px;
+        &_dot {
+            transition: all 0.1s linear;
+            transform: scale(2.0);
+            background-color: rgba(#fff, 0);
+            display: block;
+            width: 8px;
+            height: 8px;
+            border-radius: 100%;
+        }
+    }
+    select {
+        padding: 10px 20px;
+    }
+    &__switch {
+        margin-top: 20px;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 5px;
+        label {
+            position: relative;
+            cursor: pointer;
+            padding-top: 10px;
+            width: 145px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: $background;
+            line-height: 34px;
+            border: 1px solid $stroke;
+            border-radius: 3px;
+            user-select: none;
+            &:active {
+                border-color: $outline;
+            }
+            span {
+                font-weight: 700px;
+                font-size: 14px;
+                margin-top: -5px;
+                color: $text1;
+            }
+            svg {
+                margin-right: -5px;
+                width: 24px;
+                height: 24px;
+                object-fit: cover;
+                path {
+                    fill: #A1A3C0; 
+                }
+            }
+        }
+    }
+    input[type=radio]:checked + label {
+	    background: #A1A3C0;
+        svg {
+            path {
+                fill: white; 
+            }
+        }
+        span {
+            color: white;
+        }
+        .diagnose-form__circle_dot {
+            transform: scale(1.0);
+            background-color: $button1;
+        }
+    }
+    input[type=radio]:unchecked + label {
+        svg {
+            path {
+                fill: #A1A3C0; 
+            }
+        }
+        span {
+            color: #A1A3C0;
+        }
+    }
+    &__input {
+        width: 100%;
+        height: 50px;
+        border: 1px solid $stroke;
+        border-radius: 3px;
+        margin: 5px 0;
+        padding: 17px 20px;
+        font-size: 14px;
+        color: $text2;
+        outline: none;
+        &:focus {
+            border-color: $outline;
+        }
+        &:hover {
+            border-color: $outline;
+        }
+        &::placeholder {
+            color: $text1;
+        }
+    }
+    button {
+        margin-top: 18px;
+        @include button
+    }
+    &__terms {
+        margin-top: 11px;
+        position: relative;
+        input {
+            appearance: none;
+            &:checked + .diagnose-form__checkbox:before {
+                opacity: 0;
+            }
+            &:checked + .diagnose-form__checkbox:after {
+                opacity: 1;
+            }
+        }
+        label {
+            position: absolute;
+            left: 26px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            letter-spacing: 0.02em;
+            color: $text2;
+            margin-top: 3px;
+            margin-left: 3px;
+            a {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+                letter-spacing: 0.02em;
+                text-decoration-line: underline;
+                color: $text2;
+                transition: color .1s linear;
+                &:hover {
+                    color: $button1;
+                }
+            }
+            &:before {
+                cursor: pointer;
+                position: absolute;
+                content: '';
+                width: 18px;
+                height: 18px;
+                border-radius: 2px;
+                border: 1px solid $stroke;
+                display: inline-block;
+                left: -27px;
+                top: -3px;
+                background-color: #fff;
+                opacity: 1;
+            }
+            &:after {
+                cursor: pointer;
+                position: absolute;
+                content: '';
+                width: 18px;
+                height: 18px;
+                border-radius: 2px;
+                border: 1px solid $stroke;
+                display: inline-block;
+                left: -27px;
+                top: -3px;
+                background-color: $background;
+                background: url(../icons/tick.svg) 2px 4px / 80% no-repeat;
+                opacity: 0;
+                transition: opacity .1s linear;
+            }
+        }
+    }
+}
+
+.diagnose__decoration {
+    width: 100%;
+    position: absolute;
+    &_1 {
+        position: absolute;
+        top: 25px;
+        left: 14.0625%;
+    }
+    &_2 {
+        position: absolute;
+        top: 597px;
+        left: 42.03125%;
+    }
+    &_3 {
+        position: absolute;
+        top: 460px;
+        left: 46.5625%;
+    }
+    &_4 {
+        position: absolute;
+        top: 92px;
+        right: 10.3125%;
+    }
+}
+@media(max-width: 1440px) {
+    .diagnose__descr {
+        padding-left: 40px;
+    }
+}
+
+@media(max-width: 1200px) {
+    .diagnose__decoration {
+        width: 100%;
+        overflow: hidden;
+    }
+}
+
+
+@media(max-width: 1024px) {
+    .diagnose {
+        height: 844px;
+        margin-top: 45px;
+        &__content {
+            flex-direction: column;
+            align-items: start;
+        }
+        &__descr {
+            padding-left: 0px;
+            max-width: 100%;
+            h2 {
+                margin-top: 40px;
+            }
+            p {
+                margin-top: 20px;
+                width: 489px;
+            }
+        }
+        &__window {
+            margin-top: 28px;
+            width: 676px;
+            height: 456px;
+            margin-right: 0px;
+            padding: 50px 28px;
+            h3 {
+                width: 444px;
+            }
+        }
+    }
+    .diagnose-form {
+        margin-top: 20px;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        grid-template-areas: 
+        "select name-input"
+        "mail-input phone-input"
+        "switch ."
+        "terms submit";
+        &__circle {
+
+
+
+
+
+
+
+        }
+        &__switch {
+            max-width: 300px;
+            grid-area: switch;
+            margin: 0;
+            padding: 0;
+        }
+        .select {
+            max-width: 300px;
+            margin: 0;
+            padding: 0;
+            grid-area: select;
+        }
+        &__input {
+            max-width: 300px;
+            margin: 0;
+            &_1 {
+                grid-area: name-input;
+            }
+            &_2 {
+                grid-area: phone-input;
+            }
+            &_3 {
+                grid-area: mail-input;
+            }
+        }
+        &__submit { 
+            max-width: 181px;
+            justify-self: end;
+            grid-area: submit;
+            display: block;
+        }
+        button {
+            margin-top: 24px;
+        }
+        &__terms { 
+            margin: 0;
+            grid-area: terms;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 576px) {
+    .diagnose {
+        background: url(../img/background.png) 0 0 / contain no-repeat;
+        margin-top: 25px;
+        &__descr {
+            margin-bottom: 8px;
+            padding-left: 0px;
+            max-width: 100%;
+            height: 240px;
+            h2 {
+                margin-top: 32px;
+                font-size: 24px;
+                line-height: 130%;
+            }
+            p {
+                width: 257px;
+                margin-top: 16px;
+                font-size: 16px;
+            }
+        }
+        &__window {
+            margin-top: 26px;
+            width: 328px;
+            height: 494px;
+            padding: 0px;
+            h3 {
+                width: 300px;
+            }
+        }
+    }
+    .diagnose-form {
+        grid-template-columns: 1fr;
+        grid-gap: 16px;
+
+        &__input {
+            max-width: 328px;
+        }
+
+        &__switch {
+            max-width: 328px;
+            label {
+                width: 156px;
+            }
+        }
+        .select {
+            max-width: 328px;
+        }
+
+        grid-template-areas: 
+        "switch"
+        "select"
+        "name-input"
+        "phone-input"
+        "mail-input"
+        "terms"
+        "submit";
+        &__submit { 
+            width: 328px;
+            justify-self: stretch;
+        }
+        button {
+            max-width: 328px;
+            margin-left: 0;
+            justify-self: stretch;
+            margin-top: 6px;
+        }
+    }
+}

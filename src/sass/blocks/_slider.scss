@@ -1,0 +1,43 @@
+.fragen__cards {
+    overflow: visible;
+    .slick-arrow {
+        position: absolute;
+        bottom: -16px;
+        width: 40px;
+        height: 40px;
+        font-size: 0;
+        background-color: transparent;
+        border: 2px solid $button1;
+        border-radius: 3px;
+    }
+    .slick-prev {
+        left: 0;
+        background: url(../icons/prev.svg) center / 60% no-repeat;
+    }
+    .slick-next {
+        right: 0;
+        background: url(../icons/next.svg) center / 60% no-repeat;
+
+    }
+} 
+
+.slider__counter {
+    display: none;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    line-height: 120%;
+    color: $text1;
+    letter-spacing: 0px;
+    &:first-letter {
+        font-weight: 700;
+        color: $button1;
+    }
+}
+@media(max-width: 576px) {
+    .slider__counter {
+        display: initial;
+    }
+}

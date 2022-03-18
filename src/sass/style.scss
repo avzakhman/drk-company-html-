@@ -1,0 +1,32 @@
+@import 'base/variables';
+@import 'base/mixins';
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+@media(max-width: 1024px) {
+    .container {
+        max-width: 768px;
+        padding: 0 45px;
+    }
+}
+@media(max-width: 576px) {
+    .container {
+        max-width: 360px;
+        padding: 0 15px;
+    }
+}
+
+@import 'blocks/fragen';
+@import 'blocks/diagnose';
+@import 'blocks/select';
+@import 'blocks/slider';
