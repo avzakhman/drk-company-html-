@@ -20,6 +20,8 @@
     display: flex;
     margin-bottom: 60px;
     &__image {
+        border-radius: 5px;
+        overflow: hidden;
         width: 370px;
         object-fit: contain;
         img{
@@ -264,6 +266,12 @@
             &_addition {
                 line-height: 120%;
                 display: initial;
+            }
+            &_blue {
+                margin-left: 0;
+                a {
+                    padding-left: 8px;
+                }
             }
         }
         &__phone {

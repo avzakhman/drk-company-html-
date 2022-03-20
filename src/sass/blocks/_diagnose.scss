@@ -51,8 +51,8 @@
         display: none;
     }
     &__circle {
+        display: none;
         position: absolute;
-        display: flex;
         justify-content: center;
         align-items: center;
         width: 20px;
@@ -340,13 +340,7 @@
         "switch ."
         "terms submit";
         &__circle {
-
-
-
-
-
-
-
+            display: flex;
         }
         &__switch {
             max-width: 300px;

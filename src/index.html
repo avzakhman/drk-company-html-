@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 <body>
@@ -20,7 +20,12 @@
                     <div class="fragen__cards">
                         <div class="fragen-card">
                             <div class="fragen-card__image">
-                                <img src="img/hdd.jpg" alt="hdd">
+                                <picture>
+                                    <source srcset="img/images/desktop/hdd.png" media="(min-width: 1025px)" />
+                                    <source srcset="img/images/tablet/hdd.png" media="(min-width: 577px)" />
+                                    <source srcset="img/images/mobile/hdd.png" media="(min-width: 320px)" />
+                                    <img src="img/images/desktop/hdd.png" />
+                                </picture>
                             </div>
                             <div class="fragen-card__content">
                                 <h3>Wiederherstellung von Festplattendaten (HDD)</h3>
@@ -32,7 +37,12 @@
                         </div>
                         <div class="fragen-card">
                             <div class="fragen-card__image">
-                                <img src="img/ssd.jpg" alt="ssd"> 
+                                <picture>
+                                    <source srcset="img/images/desktop/ssd.png" media="(min-width: 1025px)" />
+                                    <source srcset="img/images/tablet/ssd.png" media="(min-width: 577px)" />
+                                    <source srcset="img/images/mobile/ssd.png" media="(min-width: 320px)" />
+                                    <img src="img/images/desktop/ssd.png" />
+                                </picture>
                             </div>
                             <div class="fragen-card__content">
                                 <h3>Solid State Drive (SSD) Datenwiederherstellung</h3>
@@ -43,7 +53,12 @@
                         </div>
                         <div class="fragen-card">
                             <div class="fragen-card__image">
-                                <img src="img/NAS.jpg" alt="nas">
+                                <picture>
+                                    <source srcset="img/images/desktop/nas.png" media="(min-width: 1025px)" />
+                                    <source srcset="img/images/tablet/nas.png" media="(min-width: 577px)" />
+                                    <source srcset="img/images/mobile/nas.png" media="(min-width: 320px)" />
+                                    <img src="img/images/desktop/nas.png" />
+                                </picture>
                             </div>
                             <div class="fragen-card__content">
                                 <h3>Network Attached Storage (NAS) Datenrettung</h3>
@@ -55,7 +70,12 @@
                         </div>
                         <div class="fragen-card">
                             <div class="fragen-card__image">
-                                <img src="img/RAID.jpg" alt="raid">
+                                <picture>
+                                    <source srcset="img/images/desktop/raid.png" media="(min-width: 1025px)" />
+                                    <source srcset="img/images/tablet/raid.png" media="(min-width: 577px)" />
+                                    <source srcset="img/images/mobile/raid.png" media="(min-width: 320px)" />
+                                    <img src="img/images/desktop/raid.png" />
+                                </picture>
                             </div>
                             <div class="fragen-card__content">
                                 <h3>RAID - Datenwiederherstellung</h3>
@@ -67,7 +87,12 @@
                         </div>
                         <div style="margin-top: 17px;" class="fragen-card">
                             <div class="fragen-card__image">
-                                <img src="img/USB_Flash.jpg" alt="usb">
+                                <picture>
+                                    <source srcset="img/images/desktop/usb.png" media="(min-width: 1025px)" />
+                                    <source srcset="img/images/tablet/usb.png" media="(min-width: 577px)" />
+                                    <source srcset="img/images/mobile/usb.png" media="(min-width: 320px)" />
+                                    <img src="img/images/desktop/usb.png" />
+                                </picture>
                             </div>
                             <div class="fragen-card__content">
                                 <h3>USB-Stick-Datenwiederherstellung</h3>
