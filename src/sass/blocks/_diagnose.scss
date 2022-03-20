@@ -82,6 +82,8 @@
         justify-content: space-between;
         margin-bottom: 5px;
         label {
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+            -webkit-tap-highlight-color: transparent;
             position: relative;
             cursor: pointer;
             padding-top: 10px;
@@ -234,8 +236,12 @@
 }
 
 .diagnose__decoration {
-    width: 100%;
+    height: 100%;
+    width: 100vw;
+    top: 0;
+    left: 0;
     position: absolute;
+    display: block;
     &_1 {
         position: absolute;
         top: 25px;
@@ -265,9 +271,32 @@
 
 @media(max-width: 1200px) {
     .diagnose__decoration {
-        width: 100%;
-        overflow: hidden;
+        &_1 {
+            position: absolute;
+            top: 15px;
+            left: -4px;
+            width: 400px;
+            height: 400px;
+        }
+        &_2 {
+            width: 45px;
+            height: 45px;
+            position: absolute;
+            top: 195px;
+            left: 596px;
+        }
+        &_3 {
+            width: 126px;
+            height: 126px;
+            position: absolute;
+            top: 29px;
+            left: 614px;
+        }
+        &_4 {
+            display: none;
+        }
     }
+    
 }
 
 
@@ -363,7 +392,96 @@
 
 
 
+@media(max-width: 768px) {
+    .diagnose__decoration {
+        &_1 {
+            position: absolute;
+            top: 20px;
+            left: 70px;
+            width: 280px;
+            height: 280px;
+        }
+        &_2 {
+            width: 38px;
+            height: 38px;
+            position: absolute;
+            top: 40px;
+            left: 500px;
+        }
+        &_3 {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 170px;
+            left: 400px;
+            z-index: 0;
+        }
+    }
+    .diagnose {
+        &__descr {
+            z-index: 1;
 
+            margin: 0 auto;
+            h2 {
+                width: 470px;
+                font-size: 30px;
+            }
+            p {
+                width: 470px;
+
+                font-size: 22px;
+            }
+        }
+        &__window {
+            margin: 0;
+            align-self: center;
+            margin-top: 26px;
+            width: unset;
+            height: unset;
+            min-height: 494px;
+            h3 {
+                width: unset;
+                max-width: 300px;
+            }
+        }
+    }
+    .diagnose-form {
+        grid-template-areas: 
+        "select name-input"
+        "mail-input phone-input"
+        "switch terms"
+        "submit submit";
+        &__input {
+            width: unset;
+            max-width: 300px;
+        }
+        &__switch {
+            max-width: 350px;
+            width: unset;
+            display: grid;
+            grid-gap: 16px;
+            grid-template-columns: 1fr 1fr;
+            label {
+                width: unset;
+            }
+        }
+        .select {
+            max-width: 328px;
+        }
+        &__submit { 
+            width: unset;
+
+        }
+        &__terms {
+            margin-top: 12px;
+            width: unset;
+        }
+        button {
+            width: unset;
+            margin-top: 0;
+        }
+    }
+}
 
 
 
@@ -375,15 +493,48 @@
 
 
 @media(max-width: 576px) {
+    .diagnose__decoration {
+        width: 100%;
+        overflow: hidden;
+        &_1 {
+            display: none;
+        }
+        &_2 {
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            top: 183px;
+            right: 32px;
+            left: unset;
+        }
+        &_3 {
+            position: absolute;
+            top: 12px;
+            left: 10px;
+            width: 120px;
+            height: 120px;
+        }
+        &_4 {
+            display: block;
+            width: 96px;
+            height: 96px;
+            top: 48px;
+            right: -30px;
+        }
+    }
+
     .diagnose {
-        background: url(../img/background.png) 0 0 / contain no-repeat;
+        background: url(../img/background.png) 0 0 / 100% 240px no-repeat;
         margin-top: 25px;
         &__descr {
+            margin-left: 0px;
+            width: unset;
             margin-bottom: 8px;
             padding-left: 0px;
             max-width: 100%;
             height: 240px;
             h2 {
+                width: unset;
                 margin-top: 32px;
                 font-size: 24px;
                 line-height: 130%;
@@ -397,7 +548,8 @@
         &__window {
             margin-top: 26px;
             width: 328px;
-            height: 494px;
+            height: unset;
+            min-height: 600px;
             padding: 0px;
             h3 {
                 width: 300px;
@@ -411,7 +563,9 @@
         &__input {
             max-width: 328px;
         }
-
+        &__terms {
+            margin-top: 1px;
+        }
         &__switch {
             max-width: 328px;
             label {
@@ -438,7 +592,7 @@
             max-width: 328px;
             margin-left: 0;
             justify-self: stretch;
-            margin-top: 6px;
+            margin-top: 3px;
         }
     }
 }

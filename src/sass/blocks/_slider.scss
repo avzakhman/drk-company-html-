@@ -2,7 +2,7 @@
     overflow: visible;
     .slick-arrow {
         position: absolute;
-        bottom: -16px;
+        bottom: -72px;
         width: 40px;
         height: 40px;
         font-size: 0;
@@ -21,10 +21,10 @@
     }
 } 
 
-.slider__counter {
+.sl-count {
     display: none;
     position: absolute;
-    bottom: -15px;
+    bottom: -68px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 24px;
@@ -37,7 +37,7 @@
     }
 }
 @media(max-width: 576px) {
-    .slider__counter {
+    .sl-count {
         display: initial;
     }
 }

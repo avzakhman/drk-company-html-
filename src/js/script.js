@@ -30,21 +30,9 @@ select();
 var $slider = $('.fragen__cards');
 $slider.slick({
     adaptiveHeight: true,
-    slideShow: true
+    slideShow: true,
+    slidesToShow: 1
 });
-
-
-
-var $status = $('.pagingInfo');
-var $slickElement = $('.slideshow');
-
-$slickElement.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
-    //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
-    var i = (currentSlide ? currentSlide : 0) + 1;
-    $status.text(i + '/' + slick.slideCount);
-});
-
-
 
 $(window).on('load resize', function() {
     if ($(window).width() < 577) {
@@ -53,4 +41,20 @@ $(window).on('load resize', function() {
     } else {
       $(".fragen__cards.slick-initialized").slick("unslick");
     }
+});
+
+
+
+
+var slider 		 = $('.fragen__cards');
+	total        = slider.slick("getSlick").slideCount;
+	currentSlide = $('.fragen__cards').slick('slickCurrentSlide');
+	slide        = currentSlide + 1;
+if ( total > 1 ) {
+	$(".sl-count__current").text(slide);
+	$('.sl-count__total').text(total);
+}
+$(".fragen__cards").on('afterChange', function(event, slick, currentSlide, nextSlide){
+	var currentSl = currentSlide + 1;
+	$(".sl-count__current").text(currentSl);
 });

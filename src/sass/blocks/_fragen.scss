@@ -5,6 +5,9 @@
         font-weight: 500;
         letter-spacing: 1.2px;
     }
+    &__contents {
+        position: relative;
+    }
     &__cards {
         display: flex;
         flex-direction: column;
@@ -13,19 +16,20 @@
 }
 
 .fragen-card {
+    padding: 0 1px;
     display: flex;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     &__image {
         width: 370px;
-        height: 360px;
+        object-fit: contain;
         img{
+            object-fit: contain;
             width: 100%;
-            height: 100%;
         }
     }
     &__content {
         padding-top: 15px;
-        padding-left: 30px;
+        padding-left: 50px;
         display: flex;
         flex-direction: column;
         align-items: start;
@@ -254,7 +258,7 @@
         }
     }
     .andere-fragen { 
-        margin-top: 48px;
+        margin-top: 105px;
         &__text {
             line-height: 153%;
             &_addition {
