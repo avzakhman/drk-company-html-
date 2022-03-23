@@ -10,6 +10,10 @@ section {
     max-width: 100%;
     overflow: hidden;
 }
+header {
+    max-width: 100%;
+    overflow: hidden;
+}
 .container {
     max-width: 1180px;
     margin: 0 auto;
@@ -29,7 +33,14 @@ section {
     }
 }
 
+@import 'blocks/header';
+@import 'blocks/mainscreen-slider';
+@import 'blocks/information';
+
 @import 'blocks/fragen';
 @import 'blocks/diagnose';
 @import 'blocks/select';
 @import 'blocks/slider';
+
+@import 'blocks/datenretter';
+

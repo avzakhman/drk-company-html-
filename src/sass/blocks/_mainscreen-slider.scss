@@ -1,0 +1,188 @@
+.mainscreen-slider {
+    position: relative;
+    width: 100%;
+    height: 437px;
+    z-index: 1;
+    .slick-dots {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 84.5%;
+        list-style: none;
+        li {
+            transition: all 0.2s linear;
+            margin-left: 4px;
+            list-style-image: url(../../icons/dot.svg);
+            list-style-position: -10px -10px;
+            border-color: rgba($color: #000000, $alpha: 0);
+            padding-bottom: 15px;
+            button {
+                display: none;
+            }
+        }
+        .slick-active {
+            list-style-image: url(../../icons/dot_active.svg);
+            list-style-position: -10px -10px;
+            border-color: rgba($color: #000000, $alpha: 0);
+            padding-bottom: 15px;
+            margin-left: 1px;
+
+        }
+    }
+    img {
+        object-fit: cover;
+    }
+}
+
+.mainscrlider-block {
+    position: relative;
+    margin-bottom: 10px;
+    &__background {
+        width: 100vw;
+        height: 436px;    
+    }
+    max-height: 437px;
+    width: 100%;
+    &__content {
+        margin-left: -6px;
+        padding: 0 30px;
+        display: flex;
+        justify-content: space-between;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        width: 1180px;
+        height: 100%;
+    }
+    &__text {
+        padding: 70px 0;
+        display: block;
+        height: 100%;
+        width: 598px;
+        color: white;
+        h2 {
+            font-size: 44px;
+            font-weight: 500;
+            letter-spacing: 1.4px;
+            line-height: 120%;
+            span {
+                color: $text2
+            }
+        }
+        p {
+            width: 574px;
+            margin: 11px 0 29px 0;
+            font-size: 24px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            line-height: 150%;
+            span {
+                color: $text1
+            }
+        }
+        button {
+            @include button;
+        }
+    }
+    &__images {
+        margin-right: 37px;
+        width: 500px;
+        display: flex;
+        justify-content: start;
+        img {
+            height: 100%;
+        }
+    }
+}
+
+@media(max-width: 1024px) {
+    .mainscreen-slider {
+        height: 377px;
+        .slick-dots {
+            left: 91.6%;
+        }
+    }
+    
+    .mainscrlider-block {
+        &__background {
+            height: 377px;    
+        }
+        height: 377px;
+        &__content {
+            padding: 0 45px;
+            width: 768px;
+        }
+        &__text {
+            padding: 40px 0;
+            h2 {
+                width: 565px;
+            }
+            p {
+                padding-left: 5px;
+                width: 461px;
+                margin: 11px 0 20px 0;
+            }
+        }
+        &__images {
+            display: none;
+        }
+    }
+    
+}
+@media(max-width: 576px) {
+    .mainscreen-slider {
+        height: 377px;
+        .slick-dots {
+            display: none;
+            display: block;
+            width: 118px;
+            height: 24px;
+            top: 81%;
+            left: 50.3%;
+            transform: translateX(-50%);
+            li {
+                margin: 3px 6px;
+                display: inline-block;
+                width: 18px;
+                height: 18px;
+                background: url(../../icons/dot.svg) center no-repeat;
+            }
+            .slick-active {
+                margin: 0;
+                background: url(../../icons/dot_active.svg) center no-repeat;
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+    
+    .mainscrlider-block {
+        &__background {
+            height: 362px;    
+        }
+        height: 362px;
+        &__content {
+            padding: 0px;
+            width: 360px;
+        }
+        &__text {
+            padding: 21px;
+            padding-top: 34px;
+            h2 {
+                width: 327px;
+                font-size: 24px;
+            }
+            p {
+                padding-top: 21px;
+                padding-left: 0px;
+                width: 260px;
+                margin: 0px;
+                font-size: 16px;
+                padding-bottom: 14px;
+            }
+        }
+        &__images {
+            display: none;
+        }
+    }
+}

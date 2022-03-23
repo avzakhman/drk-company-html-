@@ -1,0 +1,109 @@
+.datenretter {
+    &__wrapper {
+        margin-top: 70px;
+        display: flex;
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        h2 {
+            position: absolute;
+            font-weight: 500;
+            font-size: 44px;
+            line-height: 52px;
+            letter-spacing: 0.03em;
+        }
+    }
+    &__block {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        img {
+            left: -14px;
+            position: absolute;
+            margin-top: 67px;
+            width: 102px;
+            height: 102px;
+        }
+        h3 {
+            margin-top: 182px;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 28px;
+            letter-spacing: 0.03em;
+        }
+        p {
+            width: 270px;
+            margin-top: 10px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 175%;
+            letter-spacing: 0.03em;
+            color: $text1;
+        }
+    }
+}
+
+
+@media(max-width: 1024px) {
+    .datenretter {
+        &__wrapper {
+            margin-top: 40px;
+        }
+        &__block {
+            img {
+                left: 0px;
+                position: absolute;
+                margin-top: 76px;
+                width: 102px;
+                height: 102px;
+            }
+            h3 {
+                margin-top: 189px;
+                font-size: 16px;
+                line-height: 19px;
+            }
+            p {
+                width: 206px;
+                margin-top: 6px;
+                font-size: 12px;
+                line-height: 175%;
+            }
+        }
+    }   
+}
+
+@media(max-width: 576px) {
+    .datenretter {
+        &__wrapper {
+            padding-top: 10px;
+            flex-direction: column;
+            margin-top: 0px;
+            h2 {
+                z-index: 20;
+                margin-top: -10px;
+                font-size: 24px;
+                line-height: 135%;
+            }
+        }
+        &__block {
+            margin-top: 22px;
+            img {
+                left: 0px;
+                margin-top: 16px;
+            }
+            h3 {
+                margin-left: 3px;
+                margin-top: 123px;
+                font-size: 20px;
+                line-height: 28px;
+            }
+            p {
+                width: 329px;
+                line-height: 170%;
+                margin-top: 6px;
+                font-size: 16px;
+                margin-bottom: 0;
+            }
+        }
+    } 
+}

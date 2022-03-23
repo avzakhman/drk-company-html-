@@ -67,6 +67,30 @@ window.addEventListener('DOMContentLoaded', ()=> {
         });
     }
     count();
+
+
+
+    //функция слайдера
+    const MainScreenSlider = function() {
+        var $slider = $('.mainscreen-slider');
+        $slider.slick({
+            dots: true,
+            vertical: true,
+            slidesToShow: 1,
+            speed: 1000,
+            autoplaySpeed: 30000,
+            autoplay: true,
+            arrows: false,
+            verticalSwiping:true
+        });
+    }
+
+    MainScreenSlider();
+
+
+
+
+
 })
 
 

@@ -302,7 +302,10 @@
 
 @media(max-width: 1024px) {
     .diagnose {
-        height: 844px;
+        .container {
+            overflow: visible;
+        }
+        height: 839px;
         margin-top: 45px;
         &__content {
             flex-direction: column;
@@ -324,6 +327,7 @@
             width: 676px;
             height: 456px;
             margin-right: 0px;
+            overflow: visible;
             padding: 50px 28px;
             h3 {
                 width: 444px;
@@ -478,14 +482,6 @@
 }
 
 
-
-
-
-
-
-
-
-
 @media(max-width: 576px) {
     .diagnose__decoration {
         width: 100%;
@@ -520,6 +516,7 @@
     .diagnose {
         background: url(../img/background.png) 0 0 / 100% 240px no-repeat;
         margin-top: 25px;
+        margin-bottom: -10px;
         &__descr {
             margin-left: 0px;
             width: unset;
