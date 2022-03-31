@@ -1,9 +1,7 @@
 .fragen {
     margin-top: 69px;
     h2 {
-        font-size: 44px;
-        font-weight: 500;
-        letter-spacing: 1.2px;
+        @include heading;
     }
     &__contents {
         position: relative;
@@ -14,7 +12,6 @@
         margin-top: 45px;
     }
 }
-
 .fragen-card {
     padding: 0 1px;
     display: flex;
@@ -46,11 +43,7 @@
         p {
             max-width: 780px;
             margin-top: 10px;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 21px;
-            letter-spacing: 0.1px;
-            color: $text1;
+            @include text;
         }
         button {
             margin-top: 19px;
@@ -65,87 +58,9 @@
     }
 }
 
-.andere-fragen {
-    margin-top: 26px;
-    display: flex;
-    &__text {
-        max-width: 700px;
-        letter-spacing: 0.3px;
-        font-size: 16px;
-        color: $text1;
-        line-height: 27px;
-        &_blue {
-            max-width: 700px;
-            letter-spacing: 0.3px;
-            font-size: 16px;
-            line-height: 27px;
-            margin-left: 7px;
-            color: $text2;
-            font-weight: 700;
-            a {
-                text-decoration: none;
-                max-width: 700px;
-                letter-spacing: 0.3px;
-                font-size: 16px;
-                line-height: 27px;
-                margin-left: 7px;
-                color: $text2;
-                font-weight: 700;
-            }
-        }
-        &_addition {
-            display: none;
-        }
-    }
-    &__phone {
-        z-index: 2;
-        position: relative;
-        margin-left: 100px;
-        display: flex;
-        flex-direction: column;
-        h3 {
-            font-size: 24px;
-            font-weight: 500;
-            letter-spacing: 0.36px;
-        }
-        a {
-            font-size: 24px;
-            font-weight: 500;
-            color: $text2;
-            text-decoration: none;
-            margin: 8px 0;
 
-        }
-        // span {
-        //     letter-spacing: 0.36px;
-        //     font-size: 16px;
-        //     font-weight: 400;
-        // }
-    }
-}
 
-.andere-fragen__decoration{
-    z-index: -1;
-    position: absolute;
-    &_1 {
-        position: absolute;
-        top: -75px;
-        left: -13px;
-    }
-    &_2 {
-        position: absolute;
-        top: -51px;
-        right: -334px;
-    }
-}
-
-@media(max-width: 1200px) {
-    .andere-fragen__decoration {
-        display: none;
-    }   
-}
-
-@media(max-width: 1024px) {
+@media(max-width: 1240px) {
     .fragen {
         margin-top: 40px;
         &__cards {
@@ -186,80 +101,8 @@
             letter-spacing: 0.33px;
         }
     }
-    
-    
-    .andere-fragen {
-        margin-top: -4px;
-        display: flex;
-        flex-direction: column;
-        &__phone {
-            margin-top: 3px;
-            margin-left: 0px;
-            flex-direction: row;
-            h3 {
-                color: $text1;
-                font-size: 16px;
-                font-weight: 400;
-            }
-            &_blue {
-                color: $text1;
-                font-size: 16px;
-                font-weight: 400;
-            }
-            a {
-                font-size: 16px;
-                margin: 0 4px 0 4px;
-                font-weight: 700;
-            }
-        }
-    }
 }
-
 @media(max-width: 576px) {
-    .fragen {
-        margin-top: 32px;
-        h2 {
-            font-size: 24px;
-            letter-spacing: 0.12px;
-        }
-        &__cards {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            overflow-x: scroll;
-            margin-top: 16px;
-        }
-    }
-    .fragen-card {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 0px;
-        &__image {
-            width: 328px;
-            height: 260px;
-            margin-bottom: 2px;
-        }
-        &__content {
-            padding-top: 8px;
-            padding-left: 0px;
-            h3 {
-                font-size: 16px;
-                line-height: 150%;
-                margin-bottom: 0px;
-            }
-            p {
-                max-width: 328px;
-                margin-top: 8px;
-            }
-            button {
-                margin-top: 16px;
-            }
-        }
-        &__price {
-            margin-left: 1px;
-            margin-top: 8px;
-        }
-    }
     .andere-fragen { 
         margin-top: 105px;
         &__text {

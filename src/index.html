@@ -35,26 +35,31 @@
                     <img src="icons/lang.svg" alt="language">
                     <span>DE</span>
                     <img src="icons/arr.svg" alt="arr">
+                    <div class="header__sprache-menu">
+                        <a href="#">Deutsch (DE)</a>
+                        <a href="#">English (EN)</a>
+                        <a href="#">Français (FR)</a>
+                    </div>
                 </div>
                 <button class="header__button">Daten wiederherstellen</button>
             </div>
             <nav class="header__nav">
-                <div class="header__datenrettung">
+                <button class="header__datenrettung">
                     <div class="header__burger">
                         <span></span>
                         <span></span>
                         <span></span>
                     </div>
                     Datenrettung
-                </div>
-                <a href="#">Preise</a>
-                <a href="#">Ablauf</a>
-                <a href="#">Express-Servise</a>
-                <div class="submenu">
+                </button>
+                <a class="header__desktop-link" href="#">Preise</a>
+                <a class="header__desktop-link" href="#">Ablauf</a>
+                <a class="header__desktop-link" href="#">Express-Servise</a>
+                <div class="header__desktop-link submenu">
                     Unternehmen / Privatkunden
                     <img src="icons/arr.svg" alt="arr">
                 </div>
-                <div class="submenu">
+                <div class="header__desktop-link submenu">
                     Informationen
                     <img src="icons/arr.svg" alt="arr">
                 </div>
@@ -62,6 +67,46 @@
         </div>
 
     </header>
+    <aside class="menu">
+        <div class="menu__decoration">
+            <img class="menu__decoration_1" src="img/background elements/10.svg" alt="10">
+            <img class="menu__decoration_2" src="img/background elements/07.png" alt="07">
+            <img class="menu__decoration_3" src="img/background elements/11.svg" alt="11">
+            <img class="menu__decoration_4" src="img/background elements/09.svg" alt="09">
+
+        </div>
+        <div class="container">
+            <h3>Alle Datenwiederherstellungsdienste in Datenrettungs-klinik</h3>
+            <div class="menu__wrapper">
+                <div class="menu__col">
+                    <h4>Festplatten</h4>
+                    <a href="#">Datenrettung Festplatte (HDD)</a>
+                    <a href="#">Datenrettung SSD</a>
+                    <a href="#">Datenrettung externe Festplatte</a>
+                    <h4>Flash-Speicher</h4>
+                    <a href="#">Datenrettung Flash-Speicher</a>
+                    <a href="#">Datenrettung USB-Stick</a>
+                    <a href="#">Datenrettung SD-Karte und MikroSD Karte</a>
+                    <h4>Dateien</h4>
+                    <a href="#">Gelöschte Dateien</a>
+                </div>
+                <div class="menu__col">
+                    <h4>System</h4>
+                    <a href="#">Notebook/Laptop Datenrettung </a>
+                    <a href="#">Apple/Mac Datenrettung</a>
+                    <a href="#">Virtuelle Systeme</a>
+                    <h4>Raid/Server</h4>
+                    <a href="#">Raid Datenrettung</a>
+                    <a href="#">NAS Datenrettung</a>
+                    <a href="#">Server Datenrettung</a>
+                    <a href="#" class="sub-link">NAS Synology</a>
+                    <a href="#" class="sub-link">NAS QNAP</a>
+                    <a href="#" class="sub-link">NAS WD My Cloud</a>
+                    <a href="#">SAN Datenrettung</a>
+                </div>
+            </div>
+        </div>
+    </aside>
     <main>
         <section class="mainscreen-slider">
             <div class="mainscrlider-block">
@@ -152,7 +197,7 @@
                 <div class="fragen__contents">
                     <h2>Häufig gestellte Fragen</h2>
                     <div class="fragen__cards">
-                        <div class="fragen-card">
+                        <article class="fragen-card">
                             <div class="fragen-card__image">
                                 <picture>
                                     <source srcset="img/images/desktop/hdd.png" media="(min-width: 1025px)" />
@@ -168,8 +213,8 @@
                                 <span class="fragen-card__price">Preise ab 150 €</span>
                                 <button>Mehr erfahren</button>
                             </div>
-                        </div>
-                        <div class="fragen-card">
+                        </article>
+                        <article class="fragen-card">
                             <div class="fragen-card__image">
                                 <picture>
                                     <source srcset="img/images/desktop/ssd.png" media="(min-width: 1025px)" />
@@ -184,8 +229,8 @@
                                 <span class="fragen-card__price">Preise ab 150 €</span>
                                 <button>Mehr erfahren</button>
                             </div>
-                        </div>
-                        <div class="fragen-card">
+                        </article>
+                        <article class="fragen-card">
                             <div class="fragen-card__image">
                                 <picture>
                                     <source srcset="img/images/desktop/nas.png" media="(min-width: 1025px)" />
@@ -201,8 +246,8 @@
                                 <span class="fragen-card__price">Preise ab 390 €</span>
                                 <button>Mehr erfahren</button>
                             </div>
-                        </div>
-                        <div class="fragen-card">
+                        </article>
+                        <article class="fragen-card">
                             <div class="fragen-card__image">
                                 <picture>
                                     <source srcset="img/images/desktop/raid.png" media="(min-width: 1025px)" />
@@ -218,8 +263,8 @@
                                 <span class="fragen-card__price">Preise ab 390 €</span>
                                 <button>Mehr erfahren</button>
                             </div>
-                        </div>
-                        <div style="margin-top: 17px;" class="fragen-card">
+                        </article>
+                        <article style="margin-top: 17px;" class="fragen-card">
                             <div class="fragen-card__image">
                                 <picture>
                                     <source srcset="img/images/desktop/usb.png" media="(min-width: 1025px)" />
@@ -235,7 +280,7 @@
                                 <span class="fragen-card__price">Preise ab 150 €</span>
                                 <button>Mehr erfahren</button>
                             </div>
-                        </div>
+                        </article>
                     </div>
                     <div class="sl-count"><span class="sl-count__current">1</span> / <span class="sl-count__total"></span></div>
                 </div>
@@ -363,10 +408,328 @@
                 </div>
             </div>
         </section>
+        <section class="uber-uns">
+            <div class="uber-uns__decoration">
+                <img src="img/background elements/07.png" alt="1" class="uber-uns__decoration_1">
+                <img src="img/background elements/10.svg" alt="2" class="uber-uns__decoration_2">
+                <img src="img/background elements/09.svg" alt="3" class="uber-uns__decoration_3">
+            </div>
+            <div class="container">
+                <div class="uber-uns__wrapper">
+                    <article class="uber-uns__paragraph">
+                        <h2>Über uns in Zahlen</h2>
+                        <p>Wir haben unseren Weg im Jahr 2015 begonnen. Jeden Tag lösen wir verschiedene Aufgaben, sowohl einfache, wie die Wiederherstellung versehentlichen gelöschter Daten von einem USB-Stick, als auch komplexe,  wie die Wiederherstellung großer Datenmengen von einem Unternehmensserver. Wir nehmen sogar an, was andere aufgegeben haben! Wir können und wissen, wie man Daten wiederherstellt und dies wird durch Bewertungen nserer Arbeit bestätigt.
+                        </p>
+                    </article>
+                    <article class="uber-uns__numbers">
+                        <div class="uber-uns__number">
+                            <h3><span>98%</span></h3>
+                            <p>Erfolgreiche Wiederherstellungsfälle</p>
+                        </div>
+                        <div class="uber-uns__number">
+                            <h3><span>75</span> Regionen</h3>
+                            <p>aus denen wir Speichermedien zur Wiederherstellung erhalten haben</p>
+                        </div>
+                        <div class="uber-uns__number">
+                            <h3>Mehr als<span>15</span> Jahre</h3>
+                            <p>erfahrung von unseren Experten auf dem Gebiet der Datenrettung</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="michel">
+            <div class="container">
+                <div class="michel__wrapper">
+                    <div class="michel__text">
+                        <h2>Jeder Kunde ist uns wichtig</h2>
+                        <h3>Ein paar Worte vom Chef der „Datenrettungsklinik“:</h3>
+                        <p>Jede Datenrettung ist die einzigartige Geschichte, wo jede Video oder Fotodatei ein Leben oder ein Moment der Liebe, Freude oder des Wachstums ist. Das ist die notwendigen Arbeitsdaten, über Jahre gesammelte Kontakte oder sehr gut aufbewahrende Archive von hohem Wert. Wir schätzen jeden Kunden gleichermaßen – vom Startup bis zum Konzern ein. Besonderes viel Wert legen wir auf die Qualität des technischen Supports für unsere Kunden.</p>
+                        <div class="michel__name">
+                            <h3>Herr S. Michel</h3>
+                            <p>ist der Geschäftsführer und Inhaber der Firma </p>
+                        </div>
+                    </div>
+                    <div class="michel__img">
+                        <img src="img/people/herr_s_michel.png" alt="michel">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="kundenbewertungen">
+            <div class="container">
+                <div class="kundenbewertungen__slider">
+                    <div class="kundenbewertungen__wrapper">
+                        <div class="kundenbewertungen__text">
+                            <h2>Kundenbewertungen über Datenrettungsklinik</h2>
+                            <p>Sehr gute und professionelle Beratung. Meine externe Festplatte war sehr alt und teilweise mit tiefen Kratzern. Habe es schon bei zwei anderen versucht, bei der Datenrettungsklinik hat es endlich geklappt. Die Daten konnten, zwar nicht alles, aber mit einem sehr guten Ergebnis gerettet werden. Viel besser als erwartet. Der Preis war angemessen. Die Bearbeitung war schneller als angekündigt. Schnelle und problemlose Lieferung.</p>
+                            <div class="kundenbewertungen__name">
+                                <h3>-Tatjana</h3>
+                                <h3>14. März</h3>
+                            </div>
+                        </div>
+                        <div class="kundenbewertungen__img">
+                            <img src="img/video.png" alt="video">
+                        </div>
+                    </div>
+                    <div class="kundenbewertungen__wrapper">
+                        <div class="kundenbewertungen__text">
+                            <h2>Kundenbewertungen über Datenrettungsklinik</h2>
+                            <p>When you suddenly realize that the USB stick is no longer recognized by the computer. Error message "No medium" in the disk management. After my request, I received a very quick response from the Datenrettungsklinik. Anyone who has ever suffered a data loss knows how it makes you feel. I felt very well taken care of here. After a few days, I received an assessment and a cost estimate. It is generally an expensive undertaking to recover data, but here the price is absolutely fair. Compared to some other data recovery companies, the price is significantly lower... </p>
+                            <div class="kundenbewertungen__name">
+                                <h3>-Chanu</h3>
+                                <h3>18. Februar</h3>
+                            </div>
+                        </div>
+                        <div class="kundenbewertungen__img">
+                            <img src="img/video 2.png" alt="video">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ablauf">
+            <div class="ablauf__decoration">
+                <img src="img/background elements/10.svg" alt="10" class="ablauf__decoration_1">
+                <img src="img/background elements/05.png" alt="5" class="ablauf__decoration_2">
+                <img src="img/background elements/09.svg" alt="9" class="ablauf__decoration_3">
+            </div>
+            <div class="container">
+                <h2>
+                    Ablauf der Datenrettung
+                </h2>
+                <div class="ablauf__wrapper">
+                    <div class="ablauf__block">
+                        <img src="icons/ablauf/01.svg" alt="01">
+                        <h3>Anfrage</h3>
+                        <p>Melden Sie sich bei uns auf bequeme Weise: Füllen Sie 
+                            <a href="#">das Formular</a> auf der Webseite aus oder rufen Sie uns kostenfrei an:<a href="tel:+4908004090908">  +49 (0) 800 409 09 08.</a> Sie können uns jederzeit kontaktieren.
+                        </p>
+                    </div>
+                    <div class="ablauf__block">
+                        <img src="icons/ablauf/02.svg" alt="01">
+                        <h3>Datenträger zusenden</h3>
+                        <p>Sie senden uns Ihren Datenträger zu oder bringen diesen persönlich zu unserem Filialpartner vorbei.
+                        </p>
+                    </div>
+                    <div class="ablauf__block">
+                        <img src="icons/ablauf/03.svg" alt="01">
+                        <h3>Diagnostik </h3>
+                        <p>Diagnose im Labor, Einschätzung der Kosten und des Zeitplans der Arbeit. Wir führen die Diagnose kostenfrei durch.
+                        </p>
+                    </div>
+                    <div class="ablauf__block">
+                        <img src="icons/ablauf/04.svg" alt="01">
+                        <h3>Angebot annehmen</h3>
+                        <p>Nach Abschluss der Diagnose erhalten Sie per E-Mail ein detailliertes Angebot, mit:</p>
+                            <ul>
+                                <li>einer Datenrettungsbeschreibung; </li>
+                                <li>einem Festpreisangebot für eine mögliche Datenrettung.</li>
+                            </ul>
+                        <p>Nehmen Sie unser Angebot an und unsere Experten beginnen sofort mit der Datenrettung.</p>
+                    </div>
+                    <div class="ablauf__block">
+                        <img src="icons/ablauf/05.svg" alt="01">
+                        <h3>Datenrettung</h3>
+                        <p>Je nach Dringlichkeit und Budget bieten wir mehrere Datenrettungsoptionen an. Wünschen Sie unseren Express-Service, arbeiten wir auch nachts und am Wochenende, die Bearbeitungsdauer wird dadurch deutliche verkürzt.
+                        </p>
+                    </div>
+                    <div class="ablauf__block">
+                        <img src="icons/ablauf/06.svg" alt="01">
+                        <h3>Auflistung Daten</h3>
+                        <p>Sie erhalten eine Auflistung der geretteten Daten. Durch Abnahme der Liste bestätigen Sie den Erfolg der Datenrettung und Kosten entstehen nur im Erfolgsfall. Der Datenversand ist in 3 Wegen möglich: auf einem von Ihnen gestellten Datenträger, auf unserer Leihfestplatte oder wir senden Ihnen einen Link zur Cloud. Es ist nicht nötig uns zu besuchen, Ihre Daten werden per Post zugeschickt.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="analyse">
+            <div class="ablauf__decoration">
+                <img src="img/background elements/10.svg" alt="10" class="ablauf__decoration_1">
+                <img src="img/background elements/05.png" alt="5" class="ablauf__decoration_2">
+                <img src="img/background elements/09.svg" alt="9" class="ablauf__decoration_3">
+            </div>
+            <div class="container">
+                <div class="analyse__wrapper">
+                    <h2>Die kostenfreie Analyse anfragen</h2>
+                    <p>Der schnellste Weg zur Analyse Ihres Datenträgers ist das Formular auf der Web-Seite. Füllen Sie das aus und wir kontaktieren mit Ihnen.</p>
+                    <button> Daten wiederherstellen</button>
+                </div>
+            </div>
+        </section>
+        <section class="fragen-tabs">
+            <div class="container">
+                <h2>Häufig gestellte Fragen</h2>
+                <div class="fragen-tabs__wrapper">
+                    <article class="fragen-tabs__card">
+                        <header>
+                            <h3>Kann ich sicher sein, dass meine Daten geschützt sind?</h3>
+                            <div class="fragen-tabs__open">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </header>
+                        <div class="fragen-tabs__content">
+                            <p>Datenschutz hat bei uns höchste Priorität. Wir sind für jeden Auftrag persönlich verantwortlich, weswegen wir alle notwendigen Maßnahmen treffen, damit Ihre Daten nicht in falsche Hände geraten. Alle Daten von den beschädigten Medien werden nur auf dem Server von uns gespeichert und nicht als einzelne Dateien. Sie haben ein einzigartiges Format auf das niemand Zugriff hat. Nur eine einzige Kopie wird an den Kunden gesendet, wodurch nur Sie Ihre Daten bekommen werden.</p>
+                        </div>
+                    </article>
+                    <article class="fragen-tabs__card">
+                        <header>
+                            <h3>Ich wohne in der Schweiz, wie kann ich Ihnen meinen Datenträger senden?</h3>
+                            <div class="fragen-tabs__open">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </header>
+                        <div class="fragen-tabs__content">
+                            <p>Für uns ist das kein Problem. Jeden Tag werden verschiedene Datenmedien (USB-Stick, Speicherkarten, SSD-Festplatten) aus verschiedenen Ländern: Österreich, Frankreich, Belgien, Tschechische Republik usw. von uns erhalten. In diesem Fall versenden Sie die Medien mit einem beliebigen Postdienst. Der Rückversand des Speichers erfolgt auf unsere Kosten. Ihre Einsendung muss versichert sein, damit Sie und unser Team die Sendung verfolgen können.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="fragen-tabs__card">
+                        <header>
+                            <h3>Wie kann ich meine Medien vor dem Versand richtig verpacken?</h3>
+                            <div class="fragen-tabs__open">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </header>
+                        <div class="fragen-tabs__content">
+                            <ul>
+                                <li>Entfernen Sie den Datenträger aus dem Gerät (PC, Notebook etc.);</li>
+                                <li>Verpacken Sie den Datenträger gut: wickeln Sie ihn in Luftpolsterfolie ein und legen Sie ihn in einen stabilen Karton. Stellen Sie sicher, dass sich die Medien in der Verpackung nicht bewegen und verwenden Sie Polstermaterial, um Beschädigungen während des Transports zu vermeiden. Die Datenträger (USB-Stick, Speicherkarten, SSD-Festplatten) können in einem weichen gepolsterten Umschlag verpackt werden.
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="fragen-tabs__card">
+                        <header>
+                            <h3>Wovon hängt der Preis der Datenrettung ab?</h3>
+                            <div class="fragen-tabs__open">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </header>
+                        <div class="fragen-tabs__content">
+                            <p>Der finale Preis hängt von der Art der Speichermedien, der Art des Schadens, der benötigten Datenrettungslösung, der Speicherkapazität und der erforderlichen Dringlichkeit ab. Der transparente Preis wird Ihnen auch telefonisch unter +49 (0) 800 409 09 08 angeboten.</p>
+                        </div>
+                    </article>
+                    <article class="fragen-tabs__card">
+                        <header>
+                            <h3>Wie kann ich sicher sein, dass die von Ihnen geleistete Arbeit von hoher Qualität ist?</h3>
+                            <div class="fragen-tabs__open">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </header>
+                        <div class="fragen-tabs__content">
+                            <p>Sie können sich mit den Bewertungen über unsere Arbeit vertraut machen. Das Qualitätsergebnis sind alle geretteten Dateien. Nur wenn Ihre Daten gerettet wurden, wird der Auftrag nach Abnahme der Datenrettung in Rechnung gestellt.</p>
+                        </div>
+                    </article>
+                </div>
+                <a href="#">Zu Häufig Gestellte Fragen</a>
+            </div>
+        </section>
+        <section class="expertenblog">
+            <div class="container">
+                <div class="expertenblog__wrapper">
+                    <div class="expertenblog__descr">
+                        <h2>Expertenblog der Datenrettung</h2>
+                        <p>Wir tauschen Erfahrungen aus, beantworten häufig gestellte Fragen und entdecken die Besonderheiten von Datenwiederherstellungsprozessen verschiedener Speichermedien.</p>
+                        <div class="expertenblog__michel">
+                            <img src="img/people/michel__sm.png" alt="michel image">
+                            <h3>Herr S. Michel <br><span>Mit 22 Jahren Erfahrung</span></h3>
+                            
+                        </div>
+                    </div>
+                    <div class="expertenblog__cards">
+                        <div class="expertenblog-block">
+                            <img src="img/expertenblog/01.png" alt="01">
+                            <h4>Datenrettung defekte festplatte</h4>
+                        </div>
+                        <div class="expertenblog-block">
+                            <img src="img/expertenblog/02.png" alt="02">
+                            <h4>Datenwiederherstellung von RAID 0, 6 und 10</h4>
+                        </div>
+                        <div class="expertenblog-block">
+                            <img src="img/expertenblog/03.png" alt="03">
+                            <h4>Wiederherstellen von gelöschten Order auf SD-Speicherkarten und PC</h4>
+                        </div>
+                        <div class="expertenblog-block">
+                            <img src="img/expertenblog/04.png" alt="04">
+                            <h4>Gelöschte dateien unter Windows 10 wiederherstellen</h4>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">Zum Expertenblog</a>
+            </div>
+        </section> 
     </main>
+    <footer class="footer">
+        <div class="container">
+            <nav class="footer__wrapper">
+                <div class="footer-block">
+                    <h4>Festplatten</h4>
+                    <a href="#">Datenrettung Festplatte (HDD)</a>
+                    <a href="#">Datenrettung Festplatte (SSD)</a>
+                    <a href="#">Datenrettung externe Festplatte</a>
+                    <h4>Flash-Speicher</h4>
+                    <a href="#">Datenrettung Flash-Speicher</a>
+                    <a href="#">Datenrettung USB-Stick</a>
+                    <a href="#">Datenrettung SD-Karte und MikroSD Karte</a>
+                    <h4>Dateien</h4>
+                    <a href="#">Gelöschte Dateien</a>
+                </div>
+                <div class="footer-block">
+                    <h4>System</h4>
+                    <a href="#">Laptop Datenrettung</a>
+                    <a href="#">Apple/Mac Datenrettung</a>
+                    <a href="#">Virtuelle Systeme</a>
+                    <h4>Raid/Server</h4>
+                    <a href="#">Raid Datenrettung</a>
+                    <a href="#">NAS Datenrettung</a>
+                    <a href="#">Server Datenrettung</a>
+                    <a href="#">SAN Datenrettung</a>
+                </div>
+                <div class="footer-block">
+                    <h4>Informationen</h4>
+                    <a href="#">Preise </a>
+                    <a href="#">Ablauf</a>
+                    <a href="#">Express-Servise</a>
+                    <a href="#">Unternehmen</a>
+                    <a href="#">Privatkunden</a>
+                    <a href="#">Über uns</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Kontact</a>
+                </div>
+                <div class="footer-block">
+                    <img src="icons/logo_footer.svg" alt="logo">
+                    <a class="footer__link" href="tel:+4908004090908">+ 49 (0) 800 409 09 08</a>
+                    <a class="footer__link footer__link_mail" href="mailto:info@datenrettung-klinik.de">info@datenrettung-klinik.de</a>
+                    <button>Daten wiederherstellen</button>
+                    <a href="#">Impressum</a>
+                    <a href="#">AGB</a>
+                    <a href="#">Widerrursformular</a>
+                    <a href="#">Widerrufsbelchrung</a>
+                    <a href="#">Datenschutzerklärung</a>
+                </div>
+            </nav>
+            <div class="footer__socials">
+                <a href="#"><img src="icons/socials/facebook.svg" alt="facebook"></a>
+                <a href="#"><img src="icons/socials/linkedin.svg" alt="linkedin"></a>
+                <a href="#"><img src="icons/socials/instagram.svg" alt="instagram"></a>
+                <a href="#"><img src="icons/socials/xing.svg" alt="xing"></a>
+                <a href="#"><img src="icons/socials/twitter.svg" alt="twitter"></a>
+                <p>Copyright © 2022 Datenrettungsklinik. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/menu.js"></script>
+
 
 </body>
 </html>

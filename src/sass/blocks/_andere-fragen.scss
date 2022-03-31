@@ -1,0 +1,139 @@
+.andere-fragen {
+    margin-top: 26px;
+    display: flex;
+    &__text {
+        max-width: 700px;
+        @include text_16;
+        line-height: 27px;
+        &_blue {
+            max-width: 700px;
+            letter-spacing: 0.3px;
+            font-size: 16px;
+            line-height: 27px;
+            margin-left: 7px;
+            color: $text2;
+            font-weight: 700;
+            a {
+                text-decoration: none;
+                max-width: 700px;
+                letter-spacing: 0.3px;
+                font-size: 16px;
+                line-height: 27px;
+                margin-left: 7px;
+                color: $text2;
+                font-weight: 700;
+            }
+        }
+        &_addition {
+            display: none;
+        }
+    }
+    &__phone {
+        z-index: 2;
+        position: relative;
+        margin-left: 100px;
+        display: flex;
+        flex-direction: column;
+        h3 {
+            font-size: 24px;
+            font-weight: 500;
+            letter-spacing: 0.36px;
+        }
+        a {
+            font-size: 24px;
+            font-weight: 500;
+            color: $text2;
+            text-decoration: none;
+            margin: 8px 0;
+
+        }
+    }
+}
+.andere-fragen__decoration{
+    z-index: -1;
+    position: absolute;
+    &_1 {
+        position: absolute;
+        top: -75px;
+        left: -13px;
+    }
+    &_2 {
+        position: absolute;
+        top: -51px;
+        right: -334px;
+    }
+}
+
+
+
+@media(max-width: 1200px) {
+    .andere-fragen__decoration {
+        display: none;
+    }   
+}
+@media(max-width: 1240px) {
+    .andere-fragen {
+        margin-top: -4px;
+        display: flex;
+        flex-direction: column;
+        &__phone {
+            margin-top: 3px;
+            margin-left: 0px;
+            flex-direction: row;
+            h3 {
+                color: $text1;
+                font-size: 16px;
+                font-weight: 400;
+            }
+            &_blue {
+                color: $text1;
+                font-size: 16px;
+                font-weight: 400;
+            }
+            a {
+                font-size: 16px;
+                margin: 0 4px 0 4px;
+                font-weight: 700;
+            }
+        }
+    }
+}
+@media(max-width: 576px) {
+    .andere-fragen { 
+        margin-top: 105px;
+        &__text {
+            line-height: 153%;
+            &_addition {
+                line-height: 120%;
+                display: initial;
+            }
+            &_blue {
+                margin-left: 0;
+                a {
+                    padding-left: 8px;
+                }
+            }
+        }
+        &__phone {
+            margin-left: 100px;
+            display: flex;
+            flex-direction: column;
+            h3 {
+                display: none;
+            }
+            a {
+                display: none;
+            }
+            span {
+                display: none;
+            }
+        }
+    }
+    .andere-fragen__text_blue {
+        line-height: 14px;
+        a {
+            margin-left: -5px;
+            margin-right: 8px;
+        }
+    }
+}

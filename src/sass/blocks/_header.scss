@@ -1,21 +1,28 @@
 .header {
     position: relative;
     box-shadow: 0 1px 20px white;
-    z-index: 100;
+    z-index: 200;
     padding-left: 42px;
     width: 100%;
     min-height: 190px;
     background-color: #fff;
+    overflow: visible;
+
     .container {
         padding: 0;
+        overflow: visible;
+
     }
     &__contacts {
+        background-color: #fff;
+        position: relative;
         padding-top: 8px;
         width: 100%;
         height: 99px;
         display: flex;
         align-items: center;
         border-bottom: solid 2px $border;
+        z-index: 211;
     }
     &__logo {
         display: block;
@@ -38,6 +45,9 @@
         }
     }
     &__sprache {
+        cursor: pointer;
+        user-select: none;
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -50,6 +60,26 @@
             font-weight: 700;
         }
     }
+    &__sprache-menu {
+        transition: opacity 0.2s linear;
+        top: -179px;
+        opacity: 0;
+        background-color: $background;
+        position: absolute;
+        flex-direction: column;
+        a {
+            text-decoration: none;
+            padding: 15px 26px;
+            display: block;
+            width: 169px;
+            height: 46px;
+            border-bottom: 2px solid $border;
+        }
+        &_active {
+            opacity: 1;
+        top: 59px;
+        }
+    }    
     &__button {
         @include button;
         width: 220px;
@@ -79,6 +109,7 @@
         width: 172px;
         height: 50px;
         border: solid 2px $button1;
+        background-color: #fff;
         border-radius: 3px;
         display: flex;
         align-items: center;
@@ -88,27 +119,73 @@
         font-size: 16px;
         color: $text2;
         font-weight: 700;
+        &_active {
+            .header__burger{
+                span {
+                    &:nth-child(1) {
+                        top: 9px;
+                        transform: rotate(45deg);
+                    }
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+                    &:nth-child(3) {
+                        bottom: 7px;
+                        transform: rotate(-45deg);
+
+                    }
+                }
+            }
+        }
     }
     &__burger {
+        cursor: pointer;
+        user-select: none;
         width: 18px;
         height: 18px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        position: relative;
         span {
+            transition: all .1s linear;
             margin-left: 9px;
             display: block;
             width: 18px;
             height: 2px;
             border-radius: 10px;
             background-color: $text2;
+            &:nth-child(1) {
+                position: absolute;
+                top: 0px;
+                transform: rotate(0deg);
+            }
+            &:nth-child(2) {
+                opacity: 1;
+            }
+            &:nth-child(3) {
+                position: absolute;
+                bottom: 0px;
+                transform: rotate(-0deg);
+
+            }
         }
         &_mobile {
             display: none;
         }
+        &_active {
+            
+        }
+    }
+    &__desktop-link {
+        transition: all 0.1s linear;
+        &_hidden {
+            opacity: 0;
+            overflow: hidden;
+        }
     }
 }
-@media(max-width: 1024px) {
+@media(max-width: 1240px) {
     .header {
         min-height: 90px;
         .container {
@@ -156,8 +233,10 @@
             border: solid 2px $button1;
             border-radius: 3px;
             padding: 9px 0;
-            padding-left: 1px;
+            padding-left: 9px;
+            display: flex;
             span {
+                margin: 8px 0;
                 width: 18px;
             }
             &_mobile {
@@ -191,7 +270,7 @@
             margin-right: 16px;
             background-color: #fff;
             min-width: 40px;
-            padding-left: 0px;
+            padding-left: 9px;
         }
         &__sprache {
             display: none;

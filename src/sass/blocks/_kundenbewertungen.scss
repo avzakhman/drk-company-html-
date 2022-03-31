@@ -1,0 +1,214 @@
+.kundenbewertungen {
+    margin-top: 70px;
+    background-color: $background;
+    padding-bottom: 0px;
+    &__wrapper {
+        padding-top: 70px;
+        justify-content: space-between;
+        padding-bottom: 88px;
+        width: 100%;
+        display: flex;
+        position: relative;
+    }
+    .slick-slide {
+        display: flex;
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        h2 {
+            @include heading;
+            margin-top: 0px;
+        }
+        p {
+            @include text_16;
+            line-height: 170%;
+            letter-spacing: 0.03em;
+            margin-top: 54px;
+            width: 460px;
+            position: relative;
+            display: block;
+            margin-left: 100px;
+            &:before {
+                content: '';
+                position: absolute;
+                left: -86px;
+                top: -25px;
+                width: 55px;
+                height: 45px;
+                display: block;
+                background: url('../icons/quote.svg') center / 55px 45px no-repeat;
+            }
+        }
+    }
+    &__name {
+        margin-top: 14px;
+        display: flex;
+        margin-left: 30px;
+        width: 100%;
+        margin-right: 5px;
+        align-self: flex-end;
+        h3 {
+            width: 169px;
+            margin-top: 15px;
+            margin-left: 105px;
+            margin-right: 25px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            letter-spacing: 0.03em;
+        }
+    }
+    &__img {
+        margin-top: 143px;
+    }
+
+    .slick-arrow {
+        position: absolute;
+        z-index: 20;
+        bottom: 71px;
+        height: 40px;
+        width: 40px;
+        font-size: 0;
+        background-color: transparent;
+        border: none;
+    }
+    .slick-prev {
+        left: 692px;
+        background: url(../icons/left.svg) center / 100% no-repeat;
+    }
+    .slick-next {
+        right: 351px;
+        background: url(../icons/right.svg) center / 100% no-repeat;
+    }
+}
+
+@media(max-width: 1240px) {
+    .kundenbewertungen {
+        margin-top: 42px;
+        &__wrapper {
+            padding-top: 32px;
+            padding-bottom: 14px;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        &__text {
+            h2 {
+                position: absolute;
+                top: 39px;
+            }
+            p {
+                margin-top: 69px;
+                width: 100%;
+                margin-left: 0px;
+                &:before {
+                    display: none;
+                }
+            }
+        }
+        &__name {
+            width: 100%;
+            margin-top: 17px;
+            margin-left: 0px;
+            margin-right: 0px;
+            display: flex;
+            justify-content: start;
+            h3 {
+                min-width: 188px;
+                word-wrap: none;
+                margin: 0;
+                padding: 0;
+                font-size: 24px;
+                margin-right: 283px;
+            }
+        }
+        &__img {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            height: 357px;
+            img {
+                width: 556px;
+                height: 357px;
+            }
+        }
+    
+        .slick-arrow {
+            top: 330px;
+            width: 42px;
+            height: 42px;
+            bottom: 611px;
+            border: solid 2px $button1;
+            border-radius: 3px;
+        }
+        .slick-prev {
+            left: 0px;
+            background: url(../icons/prev.svg) center / 22px 11px no-repeat;
+        }
+        .slick-next {
+            right: 0px;
+            background: url(../icons/next.svg) center / 22px 11px no-repeat;
+        }
+    }
+}
+
+@media(max-width: 576px) {
+    .kundenbewertungen {
+        &__wrapper {
+            margin: 0;
+            padding: 0;
+            height: 1048px;
+        }
+        &__text {
+            margin: 0;
+            padding: 0;
+            p {
+                position: absolute;
+                top: 652px;
+            }
+            h2 {
+                top: 22px;
+            }
+        }
+        &__name {
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 100px;
+            width: 100%;
+            flex-direction: row-reverse;
+            h3 {
+                padding: 0;
+                margin: 0;
+                font-size: 16px;
+            }
+        }
+        &__img {
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 132px;
+            width: 329px;
+            height: 509px;
+            img {
+                width: 329px;
+                height: 509px;      
+            }
+        }
+        .slick-arrow {
+            top: 664px;
+            width: 42px;
+            height: 42px;
+            border: solid 2px $button1;
+            border-radius: 3px;
+        }
+        .slick-prev {
+            left: 0px;
+            background: url(../icons/prev.svg) center / 22px 11px no-repeat;
+        }
+        .slick-next {
+            right: 0px;
+            background: url(../icons/next.svg) center / 22px 11px no-repeat;
+        }
+    }
+}

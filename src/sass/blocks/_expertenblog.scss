@@ -1,0 +1,147 @@
+.expertenblog {
+    padding: 68px 0 73px 0;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__descr {
+        margin-left: 2px;
+        max-width: 562px;
+        h2 {
+            @include heading;
+            width: 354px;
+        }
+        p {
+            margin-top: 15px;
+            @include text_16;
+            line-height: 27.2px;
+        }
+    }
+    &__michel {
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        width: 260px;
+        img {
+            padding-right: 18px;
+        }
+        h3 {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 150%;
+            letter-spacing: 0.03em;
+            span {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 150%;
+                letter-spacing: 0.03em;
+                color: $text1;
+            }
+        }
+    }
+    &__cards {
+        max-width: 570px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    a {
+        @include link;
+        display: block;
+        margin-top: -48px;
+        width: max-content;
+    }
+}
+
+.expertenblog-block {
+    margin-bottom: 37px;
+    width: 270px;
+    img {
+        transition: all 0.2s linear;
+        min-width: 270px;
+        min-height: 160px;
+        border-radius: 3px;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+    h4 {
+        margin-top: 6px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 130%;
+        letter-spacing: 0.02em;        
+    }
+}
+
+
+@media(max-width: 1240px) {
+    .expertenblog {
+        padding: 33px 0 43px 0;
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__descr {
+            max-width: 562px;
+            p {
+                margin-top: 20px;
+                margin-left: 3px;
+            }
+        }
+        &__michel {
+            margin-left: 3px;
+        }
+        &__cards {
+            max-width: 100%;
+            margin-top: 40px;
+        }
+        a {
+            margin-top: 0px;
+            margin-left: 4px;
+        }
+    }
+    
+    .expertenblog-block {
+        margin-bottom: 36px;
+        width: 324px;
+        img {
+            min-width: 324px;
+        }
+        h4 {
+            margin-top: 5px;
+            font-size: 16px; 
+        }
+    }
+}
+
+@media(max-width: 576px) {
+    .expertenblog {
+        padding: 33px 0 43px 0;
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__descr {
+            max-width: 100%;
+            p {
+                margin-top: 21px;
+                margin-left: 0px;
+                max-width: 327px;
+            }
+            h2 {
+                max-width: 100%;
+            }
+        }
+        &__michel {
+            margin-left: 0px;
+        }
+        &__cards {
+            margin-top: 33px;
+        }
+    }
+    
+    .expertenblog-block {
+        h4 {
+            margin-top: 14px;
+        }
+    }
+}

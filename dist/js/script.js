@@ -78,7 +78,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
             vertical: true,
             slidesToShow: 1,
             speed: 1000,
-            autoplaySpeed: 30000,
+            autoplaySpeed: 7000,
             autoplay: true,
             arrows: false,
             verticalSwiping:true
@@ -86,6 +86,14 @@ window.addEventListener('DOMContentLoaded', ()=> {
     }
 
     MainScreenSlider();
+
+    //функция слайдера отзывов
+    const kundenbewertungenSlider = function() {
+        var $slider = $('.kundenbewertungen__slider');
+        $slider.slick({fade: true});
+    }
+
+    kundenbewertungenSlider();
 
 
 

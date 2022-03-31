@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Roboto';
+    transition: all 0.2s;
 }
 section {
     max-width: 100%;
@@ -20,7 +21,7 @@ header {
     overflow: hidden;
     padding: 0 20px;
 }
-@media(max-width: 1024px) {
+@media(max-width: 1240px) {
     .container {
         max-width: 768px;
         padding: 0 45px;
@@ -34,13 +35,31 @@ header {
 }
 
 @import 'blocks/header';
+@import 'blocks/menu';
+
 @import 'blocks/mainscreen-slider';
 @import 'blocks/information';
 
 @import 'blocks/fragen';
+@import 'blocks/andere-fragen';
 @import 'blocks/diagnose';
 @import 'blocks/select';
 @import 'blocks/slider';
 
 @import 'blocks/datenretter';
+@import 'blocks/uber-uns';
+@import 'blocks/michel';
+@import 'blocks/kundenbewertungen';
+@import 'blocks/ablauf';
+@import 'blocks/analyse';
+@import 'blocks/fragen-tabs';
+@import 'blocks/expertenblog';
+@import 'blocks/footer';
+
+
+
+
+
+
+
 

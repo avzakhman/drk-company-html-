@@ -1,0 +1,82 @@
+.menu {
+    z-index: 111;
+    width: 100%;
+    height: 85vh;
+    background-color: $background;
+    position: absolute;
+    transition: all 0.2s ease;
+    transform: translateY(-100%);
+    opacity: 0;
+    overflow: hidden;
+    h3 {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: 0.02em;
+        padding: 41px 0 30px 0;
+    }
+    &__active {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    &__wrapper {
+        display: flex;
+    }
+    &__col {
+        width: 232px;
+        margin-right: 166px;
+        h4 {
+            padding-bottom: 20px;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 23px;
+            letter-spacing: 0.02em;
+        }
+        a {
+            display: block;
+            padding-bottom: 20px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 0.02em;
+            color: $text2;
+            text-decoration: none;
+        }
+    }
+    &__decoration {
+        width: 100%;
+        z-index: 10;
+        position: absolute;
+        &_1 {
+            position: absolute;
+            top: 99px;
+            right: 18.5%;
+        }
+        &_2 {
+            position: absolute;
+            top: 143px;
+            left: 73%;
+            width: 520px;
+            height: 520px;
+        }
+        &_3 {
+            position: absolute;
+            width: 264px;
+            height: 264px;
+            top: 176px;
+            left: 55%;
+        }
+        &_4 {
+            position: absolute;
+            width: 128px;
+            height: 128px;
+            top: 500px;
+            left: 62%;
+        }
+    }
+}
+a.sub-link {
+    font-size: 14px;
+    line-height: 12px;
+    margin-left: 37px;
+}
