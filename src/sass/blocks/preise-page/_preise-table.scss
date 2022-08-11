@@ -1,0 +1,74 @@
+.preise-table {
+    margin-top: 40px;
+    padding-bottom: 70px;
+    border-bottom: 2px solid #EEEFF4;
+    margin-bottom: 70px;
+
+    table {
+        table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
+    }
+    td, th, tr  {
+        border: 2px solid #CFD0DF;
+        padding: 26px 30px;
+        text-align: left;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: 0.02em;
+    }
+    th:nth-child(1) {
+        width: 83%;
+    }
+      
+    th:nth-child(2) {
+        width: 17%;
+    }
+}
+
+@media(max-width: 1200px) {
+    .preise-table {
+        th:nth-child(1) {
+            width: 78%;
+        } 
+        th:nth-child(2) {
+            width: 22%;
+        }
+    }
+}
+@media(max-width: 1024px) {
+    .preise-table {
+        margin-top: 30px;
+        margin-bottom: 40px;
+        th:nth-child(1) {
+            width: 69.5%;
+        } 
+        th:nth-child(2) {
+            width: 30.5%;
+        }
+    }
+}
+@media(max-width: 768px) {
+    .preise-table {
+        td, th, tr  {
+            padding: 16px;
+            font-size: 20px;
+            line-height: 150%;
+            p {
+                font-size: 14px;
+                word-wrap:break-word;
+            }
+        }
+    }
+}
+@media(max-width: 576px) {
+    .preise-table {
+        th:nth-child(1) {
+            width: 52.2%;
+        } 
+        th:nth-child(2) {
+            width: 47.8%;
+        }
+    }
+}

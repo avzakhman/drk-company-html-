@@ -1,0 +1,65 @@
+.festplatte-descr {
+    margin-bottom: 80px;
+    &__wrapper {
+        margin-top: 31px;
+        display: grid;
+        grid-gap: 140px;
+        &_1 {
+            grid-area: block1;
+        }
+        &_2 {
+            grid-area: block2;
+        }
+        &_3 {
+            margin-top: -130px;
+            grid-area: block3;
+        }
+        grid-template-areas: "block1 block2"
+                             "block3 block2";
+    }
+}
+@media (max-width: 1200px) {
+    .festplatte-descr {
+        &__wrapper {
+            grid-gap: 100px;
+            &_3 {
+                margin-top: -90px;
+            }
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .festplatte-descr {
+        &__wrapper {
+            grid-gap: 20px;
+            grid-template-areas: "block2 block3"
+                                 "block1 block1";
+            &_3 {
+                margin-left: -130px;
+                margin-top: 0px;
+            }
+            &_2 {
+                max-width: 324px;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .festplatte-descr {
+        &__wrapper {
+            grid-gap: 20px;
+            grid-template-areas: "block2"
+                                 "block3"
+                                 "block1";
+            &_3 {
+                margin-left: 0px;
+            }
+            &_2 {
+                max-width: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}

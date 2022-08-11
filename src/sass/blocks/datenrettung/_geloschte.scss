@@ -1,0 +1,129 @@
+.geloschte-descr {
+    margin-bottom: 80px;
+    &__wrapper {
+        margin-top: 31px;
+        display: grid;
+        &_1 {
+            grid-area: block1;
+        }
+        &_2 {
+            grid-area: block2;
+        }
+        &_3 {
+            grid-area: block3;
+        }
+        grid-template-areas: "block1 block2"
+                             "block3 block2";
+        p {
+            max-width: 669px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.geloschte-paragraph-and-ul {
+    p {
+        margin-bottom: 10px;
+    }
+    .paragraph-and-ul__block-wrapper {
+        div {
+            &:first-child {
+                width: 40%;
+            }
+            &:last-child {
+                width: 46%;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .geloschte-descr {
+        &__wrapper {
+            grid-gap: 100px;
+            &_3 {
+                margin-top: -90px;
+            }
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .geloschte-descr {
+        &__wrapper {
+            grid-gap: 20px;
+            grid-template-areas: "block2 block1"
+                                 "block3 block3";
+            &_3 {
+                margin-top: 0px;
+            }
+            &_2 {
+                max-width: 324px;
+            }
+        }
+    } 
+    .geloschte-paragraph-and-ul {
+        .paragraph-and-ul__block-wrapper {
+            width: 100%;
+            ul {
+                li {
+                   margin-top: 5px;
+                   margin-bottom: 5px;
+                }
+            }
+            div {
+                &:first-child {
+                    width: 100%;
+                    max-width: 100%;
+                }
+                &:last-child {
+                    width: 100%;
+                    max-width: 100%;
+                }
+            }
+            .paragraph-and-ul__points {
+                display: flex;
+                flex-direction: column;
+                ul {
+                    li {
+                       max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+@media (max-width: 768px) {
+    .geloschte-paragraph-and-ul {
+        ul {
+            margin-top: -22px;
+            li {
+                padding-bottom: 10px;
+                display: block;
+            }
+        }
+
+    }
+    .geloschte-descr {
+        margin-bottom: 0;
+        &__wrapper {
+            grid-gap: 20px;
+            grid-template-areas: "block2"
+                                 "block1"
+                                 "block3";
+            p {
+                margin: 0;
+            }
+            &_3 {
+                margin-left: 0px;
+            }
+            &_2 {
+                max-width: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.images-row {
+    &__wrapper {
+        margin-top: 20px;
+        margin-bottom: 70px;
+        display: flex;
+        grid-gap: 40px;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+    }
+    &__block {
+        width: 150px;
+        img {
+            width: 100%;
+        }
+        text-align: center;
+
+    }
+}
+
+@media (max-width: 576px) {
+    .images-row {
+        &__wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 0;
+        }
+    }
+}

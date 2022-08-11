@@ -1,0 +1,499 @@
+.big-form {
+    margin-top: 50px;
+    position: relative;
+    margin-bottom: -40px;
+    .h-button-template {
+        color: $button1;
+        &:hover {
+            color: $hover;
+        }
+        &:active {
+            color: $pressed;
+        }
+    }
+    &__block {
+        padding-top: 8px;
+        margin-bottom: 42px;
+        position: relative;
+        p {
+            margin-bottom: 15px;
+        }
+        &_p {
+            margin-top: -10px;
+            max-width: 925px;
+        }
+        .select__current {
+            font-size: 16px;
+            color: $text2;
+        }
+        input {
+            margin: 0;
+            width: 100%;
+            font-size: 16px;
+            color: $text2;
+        }
+        #kundenreferenz {
+            z-index: 3000;
+        }
+        h3 {
+            margin-bottom: 18px;
+        }
+        &_1 {
+            display: grid;
+            grid-template-columns: 360px 750px;
+            column-gap: 29px;
+            justify-content: start;
+        }
+        &_kundenreferenz {
+            display: grid;
+            grid-template-columns: 360px 360px;
+            grid-gap: 29px;
+        }
+        &_2 {
+            width: 100%;
+            display: grid;
+            grid-gap: 29px;
+            grid-template-columns: 360px 360px 360px;
+            grid-template-areas: 
+            "vorname nname pposition"
+            "strasse postleitzahl land"
+            "telefon email select";
+            input {
+                &:nth-child(1n) {
+                    grid-area: vorname;
+                }
+                &:nth-child(2n) {
+                    grid-area: nname;
+                }
+                &:nth-child(3n) {
+                    grid-area: pposition;
+                }
+                &:nth-child(4n) {
+                    grid-area: strasse;
+                    
+                }
+                &:nth-child(5n) {
+                    grid-area: postleitzahl;
+                    
+                }
+                &:nth-child(6n) {
+                    grid-area: land;
+                    
+                }
+                &:nth-child(7n) {
+                    grid-area: telefon;
+                    
+                }
+                &:nth-child(8n) {
+                    grid-area: email;
+                    
+                }
+            }
+            .select {
+                grid-area: select;
+            }
+        }
+        &_3 {
+            display: grid;
+            grid-gap: 31px;
+            grid-template-columns: 554px 554px;
+            margin-bottom: -10px;
+            .big-form__select  {
+                &:nth-child(1) {
+                    z-index: 3000;
+
+                }
+                &:nth-child(5) {
+                    z-index: 2999;
+                }
+                &:nth-child(6) {
+                    z-index: 2998;
+                }
+                &:nth-child(8) {
+                    z-index: 2997;
+                }
+            }
+        }
+        &_4 {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            grid-gap: 31px;
+            textarea {
+                width: 554px;
+                min-height: 120px;
+            }
+            .p-16-template {
+                width: 100%;
+                margin-top: -20px;
+            }
+        }
+        &_5 {
+            display: grid;
+            grid-template-columns: 554px 554px;
+            grid-gap: 31px;
+            textarea {
+                width: 100%;
+            }
+        }
+        &_6 {
+            .big-form__checkbox {
+                width: 723px;
+                margin-bottom: 48px;
+                margin-top: -15px;
+                label {
+                    &::before {
+                        top: 21px;
+                    }
+                    &::after {
+                        top: 21px;
+                    }
+                }
+            }
+            a {
+                color: $text2;
+            }
+        }
+    }
+    &__checkboxes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 16px;
+        label {
+            &:before {
+                top: 17px;
+            }
+            &:after {
+                top: 17px;
+            }
+        }
+    }
+    &__buttons {
+        display: flex;
+        grid-gap: 20px;
+        margin-bottom: 70px;
+    }
+    &__select {
+        position: relative;
+        width: 100%;
+        margin: 0;
+        .select__item {
+            background-color: #fff;
+            height: 25px;
+            padding: 18px 0 18px 25px;
+            &:hover {
+                background-color: #EEEFF4;
+            }
+        }
+    }
+    &__switch {
+        display: flex;
+        position: relative;
+        padding-top: 30px;
+        padding-bottom: 0px;
+        p {
+            margin-top: -30px;
+            position: absolute;
+        }
+        width: 554px;
+        input {
+            display: none;
+        }
+        label {
+            margin-left: 40px;
+            margin-right: 25px;
+            position: relative;
+            display: block;
+            &::before {
+                content: '';
+                display: block;
+                width: 16px;
+                height: 16px;
+                position: absolute;
+                top: 0;
+                left: -30px;
+                background-color: white;
+                border-radius: 100%;
+                border: 2px solid $button1;
+            }
+            &::after {
+                transition: all 0.2s;
+                content: '';
+                opacity: 0;
+                width: 8px;
+                height: 8px;
+                position: absolute;
+                top: 6px;
+                left: -24px;
+                background-color: $button1;
+                border-radius: 100%;
+            }
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+            -webkit-tap-highlight-color: transparent;
+            position: relative;
+            cursor: pointer;
+            user-select: none;
+        }
+        input[type=radio]:checked + label:after {
+            opacity: 1;
+
+        }
+         
+    }
+    &__checkbox {
+        margin-left: 40px;
+        label {
+            color: black;
+            font-weight: 500;
+        }
+    }
+}
+
+@media(max-width: 1200px) {
+    .big-form {
+        margin-top: 30px;
+        &__block {
+            &_1 {
+                grid-template-columns: 288px 506px;
+            }
+            &_kundenreferenz {
+                grid-template-columns: 288px 288px;
+            }
+            &_2 {
+                grid-template-columns: 288px 288px 288px;
+            }
+            &_3 {
+                grid-template-columns: 445px 445px;
+            }
+            &_4 {
+                textarea {
+                    width: 445px;
+                }
+            }
+            &_5 {
+                grid-template-columns: 445px 445px;
+            }
+        }
+    }
+}
+    
+@media(max-width: 1024px) {
+    .big-form {
+        &__block {
+            &_1 {
+                display: grid;
+                grid-template-columns: 324px 324px;
+                grid-gap: 30px;
+            }
+            &_kundenreferenz {
+                grid-template-columns: 324px;
+            }
+            &_2 {
+                width: 100%;
+                display: grid;
+                grid-gap: 29px;
+                grid-template-columns: 324px 324px;
+                grid-template-areas: unset;
+                grid-template-areas: 
+                "vorname      nname"
+                "pposition    strasse"
+                "postleitzahl land"
+                "telefon      email"
+                "select       -";
+                input {
+                    &:nth-child(1n) {
+                        grid-area: vorname;
+                    }
+                    &:nth-child(2n) {
+                        grid-area: nname;
+                    }
+                    &:nth-child(3n) {
+                        grid-area: pposition;
+                    }
+                    &:nth-child(4n) {
+                        grid-area: strasse;
+                        
+                    }
+                    &:nth-child(5n) {
+                        grid-area: postleitzahl;
+                        
+                    }
+                    &:nth-child(6n) {
+                        grid-area: land;
+                        
+                    }
+                    &:nth-child(7n) {
+                        grid-area: telefon;
+                        
+                    }
+                    &:nth-child(8n) {
+                        grid-area: email;
+                        
+                    }
+                }
+                .select {
+                    grid-area: select;
+                }
+            }
+            &_3 {
+                grid-gap: 30px;
+                grid-template-columns: 324px 324px;
+            }
+            &_4 {
+                textarea {
+                    width: 678px;
+                }
+            }
+            &_5 {
+                grid-template-columns: 678px;
+                .select {
+                    width: 324px;
+                }
+                label {
+                    margin-bottom: 20px;
+                }
+                textarea {
+                    margin-top: -20px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    .big-form {
+        margin-top: 32px;
+        &__block {
+            h3 {
+                font-size: 24px;
+            }
+            &_1 {
+                grid-template-columns: 328px;
+            }
+            &_2 {
+                grid-template-columns: 328px;
+                grid-template-areas: 
+                "vorname"
+                "nname"
+                "pposition"
+                "strasse"
+                "postleitzahl"
+                "land"
+                "telefon"
+                "email"
+                "select";
+            }
+            &_3 {
+                grid-gap: 30px;
+                grid-template-columns: 328px;
+            }
+            &_4 {
+                textarea {
+                    width: 328px;
+                    min-height: 200px;
+                }
+            }
+            &_5 {
+                grid-template-columns: 328px;
+                .select {
+                    width: 328px;
+                }
+            }
+            &_6 {
+                .big-form__checkbox {
+                    label {
+                        width: 328px;
+                    }
+                    margin-bottom: 80px;
+                }
+                .big-form__checkboxes_2 {
+                    margin-bottom: 140px;
+                }
+            }
+        }
+        &__checkboxes {
+            grid-template-columns: 1fr;
+        }
+        &__buttons {
+            display: grid;
+            button, a {
+                width: 100%;
+                &:first-child {
+                    justify-content: center;
+                    img {
+                        right: 90px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 576px) {
+    .big-form {
+        margin-top: 32px;
+        &__block {
+            h3 {
+                font-size: 24px;
+            }
+            &_1 {
+                grid-template-columns: 328px;
+            }
+            &_2 {
+                grid-template-columns: 328px;
+                grid-template-areas: 
+                "vorname"
+                "nname"
+                "pposition"
+                "strasse"
+                "postleitzahl"
+                "land"
+                "telefon"
+                "email"
+                "select";
+            }
+            &_3 {
+                grid-gap: 30px;
+                grid-template-columns: 328px;
+            }
+            &_4 {
+                textarea {
+                    width: 328px;
+                    min-height: 200px;
+                }
+            }
+            &_5 {
+                grid-template-columns: 328px;
+                .select {
+                    width: 328px;
+                }
+            }
+            &_6 {
+                .big-form__checkbox {
+                    label {
+                        width: 328px;
+                    }
+                    margin-bottom: 80px;
+                }
+                .big-form__checkboxes_2 {
+                    margin-bottom: 140px;
+                }
+            }
+        }
+        &__checkboxes {
+            grid-template-columns: 1fr;
+        }
+        &__buttons {
+            display: grid;
+            button, a {
+                width: 100%;
+                &:first-child {
+                    justify-content: center;
+                    img {
+                        right: 90px;
+                    }
+                }
+            }
+        }
+    }
+}

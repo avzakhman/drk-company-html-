@@ -1,0 +1,103 @@
+.usb-stick-descr {
+    margin-bottom: 70px;
+    h2 {
+        width: 484px;
+    }
+    &__wrapper {
+        margin-top: 31px;
+        display: grid;
+        p {
+            width: 83%;
+        }
+        &_1 {
+            grid-area: block1;
+        }
+        &_2 {
+            grid-area: block2;
+        }
+        &_3 {
+            grid-area: block3;
+            img {
+                width: 100%;
+            }
+        }
+        grid-template-areas: "block1 block3"
+                             "block2 block3";
+    }
+}
+
+.usb-stick_number{
+    width: 90px;
+    height: 100px;
+    position: relative;
+    img {
+        width: 100%;
+    }
+    span {
+        position: absolute;
+        top: 0;
+        left: 33px;
+        font-weight: 500;
+        font-size: 100px;
+        line-height: 100px;
+        letter-spacing: 0.03em;
+        color: $stroke;
+    }   
+}
+
+
+@media(max-width: 1155px) {
+    .usb-stick-descr {
+        &__wrapper {
+            &_2 {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+@media(max-width: 1024px) {
+    .usb-stick-descr {
+        h2 {
+            width: 484px;
+        }
+        &__wrapper {
+            margin-top: 31px;
+            margin-bottom: 00px;
+            grid-gap: 20px;
+            p {
+                width: unset;
+            }
+            &_1 {
+                margin-left: 0%;
+                margin-bottom: 0;
+            }
+            &_2 {
+                margin-top: 0px;
+            }
+            grid-template-areas: "block3 block2"
+                                 "block1 block1";
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .usb-stick-descr {
+        margin-bottom: -80px;
+        h2 {
+            width: 100%;
+        }
+        &__wrapper {
+            width: 100%;
+            margin-top: 31px;
+            margin-bottom: 80px;
+            grid-gap: 20px;
+            &_3 {
+                min-width: 100%;
+            }
+            grid-template-areas: "block3"
+                                 "block1"
+                                 "block2";
+        }
+    }
+}

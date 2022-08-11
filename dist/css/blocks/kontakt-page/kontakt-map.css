@@ -1,0 +1,244 @@
+.kontakt-map__wrapper {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+.kontakt-map__map {
+  overflow: hidden;
+  border-radius: 5px;
+  width: 670px;
+  height: 378px;
+}
+.kontakt-map__contacts {
+  width: 368px;
+}
+.kontakt-map__contacts h2 {
+  margin-bottom: 15px;
+}
+.kontakt-map__contacts h3 {
+  margin-top: 15px;
+}
+.kontakt-map__contacts a {
+  font-size: 400;
+  margin-bottom: 15px;
+}
+.kontakt-map__contacts address {
+  font-style: normal;
+  margin-bottom: 15px;
+}
+
+.finden {
+  padding-bottom: 70px;
+  margin-bottom: 70px;
+  border-bottom: 2px solid #EEEFF4;
+}
+.finden__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.finden__wrapper img {
+  width: 31.6%;
+  border-radius: 5px;
+}
+
+.kontakt-form {
+  margin-bottom: 70px;
+}
+.kontakt-form h2 {
+  margin-bottom: 30px;
+}
+.kontakt-form h3 {
+  font-weight: 400;
+}
+.kontakt-form h4 {
+  font-weight: 500;
+}
+.kontakt-form textarea {
+  width: 100%;
+  height: 200px;
+}
+.kontakt-form__inputs {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+}
+.kontakt-form__input-block {
+  width: 100%;
+}
+.kontakt-form__terms {
+  margin-left: 35px;
+  margin-bottom: 15px;
+}
+.kontakt-form__terms label:after {
+  top: 17px;
+}
+.kontakt-form__terms label:before {
+  top: 17px;
+}
+
+@media (max-width: 1024px) {
+  .kontakt-map__map {
+    width: 100%;
+    min-height: 382px;
+  }
+  .kontakt-map__wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .kontakt-map__contacts {
+    width: 100%;
+    margin-top: 40px;
+    padding-top: 40px;
+    display: grid;
+    grid-template-areas: "socials address" "socials offnungszeiten";
+  }
+  .kontakt-map__contacts h2 {
+    margin-top: -40px;
+    font-size: 24px;
+    position: absolute;
+  }
+  .kontakt-map__socials {
+    grid-area: socials;
+    width: 274px;
+  }
+  .kontakt-map__address {
+    grid-area: address;
+    width: 274px;
+  }
+  .kontakt-map__offnungszeiten {
+    margin-top: -20px;
+    display: block;
+    grid-area: offnungszeiten;
+    width: 153px;
+  }
+
+  .finden {
+    padding-bottom: 70px;
+    margin-bottom: 70px;
+    border-bottom: 2px solid #EEEFF4;
+  }
+  .finden h2 {
+    font-size: 24px;
+  }
+  .finden__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .finden__wrapper img {
+    width: 31.6%;
+    border-radius: 5px;
+  }
+
+  .kontakt-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  .kontakt-form h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .kontakt-form h3 {
+    margin-bottom: 10px;
+  }
+  .kontakt-form h3:first-child {
+    display: none;
+  }
+  .kontakt-form textarea {
+    height: 150px;
+  }
+  .kontakt-form button {
+    align-self: end;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+}
+@media (max-width: 576px) {
+  .nav-line {
+    margin: 16px 0;
+  }
+
+  .kontakt-map h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  .kontakt-map__map {
+    max-height: 240px;
+    min-height: 240px;
+  }
+  .kontakt-map__wrapper {
+    margin-top: 0px;
+    margin-bottom: 32px;
+  }
+  .kontakt-map__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+  .kontakt-map__contacts h2 {
+    margin-top: -60px;
+  }
+  .kontakt-map__socials {
+    margin-top: -15px;
+  }
+  .kontakt-map__address {
+    margin-top: -20px;
+  }
+
+  .finden {
+    padding-bottom: 0px;
+    margin-bottom: 66px;
+    border-bottom: none;
+  }
+  .finden h2 {
+    margin-bottom: 15px;
+  }
+  .finden__wrapper {
+    flex-direction: column;
+  }
+  .finden__wrapper img {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .kontakt-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    margin-bottom: 70px;
+  }
+  .kontakt-form h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .kontakt-form h3 {
+    margin-bottom: 10px;
+  }
+  .kontakt-form h3:first-child {
+    display: none;
+  }
+  .kontakt-form textarea {
+    height: 150px;
+  }
+  .kontakt-form button {
+    align-self: end;
+    width: 100%;
+  }
+  .kontakt-form__inputs {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 24px;
+    margin-bottom: 0;
+  }
+  .kontakt-form__terms {
+    margin-left: 27px;
+    margin-bottom: 24px;
+  }
+  .kontakt-form__terms label:after {
+    top: 17px;
+  }
+}

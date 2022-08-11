@@ -1,0 +1,23 @@
+.template-points {
+    margin-bottom: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 11%;
+    &__number {
+        max-width: 265px;
+        h3 {
+            font-size: 24px;
+            font-weight: 500;
+            span {
+                font-weight: 400;
+                font-size: 44px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .template-points { 
+        display: none;
+    }
+}

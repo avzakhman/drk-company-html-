@@ -1,8 +1,5 @@
 .fragen {
     margin-top: 69px;
-    h2 {
-        @include heading;
-    }
     &__contents {
         position: relative;
     }
@@ -19,7 +16,7 @@
     &__image {
         border-radius: 5px;
         overflow: hidden;
-        width: 400px;
+        width: 370px;
         height: 360px;
         object-fit: contain;
         img{
@@ -29,39 +26,45 @@
     }
     &__content {
         padding-top: 15px;
-        padding-left: 20px;
+        padding-left: 33px;
         display: flex;
         flex-direction: column;
         align-items: start;
-        h3 {
-            font-size: 24px;
-            font-weight: 500;
-            line-height: 28px;
-            letter-spacing: 0.5px;
-            margin-bottom: 5px;
-        }
         p {
             max-width: 780px;
             margin-top: 10px;
-            @include text;
         }
-        button {
+        a {
             margin-top: 19px;
-            @include button
         }
     }
     &__price {
-        margin-top: 15px;
+        margin-top: 10px;
         font-size: 16px;
         font-weight: 500;
         letter-spacing: 0.33px;
     }
 }
 
+@media(max-width: 1200px) {
+    .fragen-card {
+        &__image {
+            min-width: 370px;
+            min-height: 360px;
+            img{
+                width: 370px;
+                height: 360px;
+            }
+        }
+    }
+}
 
 
-@media(max-width: 1240px) {
+@media(max-width: 1024px) {
     .fragen {
+        h2 {
+            font-size: 44px;
+        }
         margin-top: 40px;
         &__cards {
             margin-top: 21px;
@@ -74,6 +77,8 @@
             display: none;
         }
         &__image {
+            min-height: 200px;
+            min-width: 200px;
             max-width: 324px;
             max-height: 315px;
             img{
@@ -84,14 +89,9 @@
         &__content {
             padding-top: 0px;
             padding-left: 33px;
-            h3 {
-                font-size: 16px;
-                line-height: 150%;
-                margin-bottom: 0px;
-            }
             p {
                 max-width: 331px;
-                
+                min-width: 200px;
             }
         }
         &__price {
@@ -102,9 +102,30 @@
         }
     }
 }
+
+@media(max-width: 767px) {
+    .fragen {
+        h2 {
+            font-size: 30px;
+        }
+    }
+}
 @media(max-width: 576px) {
+    .fragen {
+        h2 {
+            font-size: 24px;
+        }
+        margin-top: 32px;
+        &__cards {
+            margin-top: 10px;
+            margin-bottom: -60px;
+        }
+        .sl-count {
+            display: none;
+        }
+    }
     .andere-fragen { 
-        margin-top: 105px;
+        margin-top: 0px;
         &__text {
             line-height: 153%;
             &_addition {
@@ -140,4 +161,14 @@
             margin-right: 8px;
         }
     }
+    .fragen-card {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        &__content {
+            padding-top: 0px;
+            padding-left: 0px;
+        }
+    }
+
 }

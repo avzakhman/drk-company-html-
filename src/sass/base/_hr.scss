@@ -1,0 +1,17 @@
+.hr-template {
+    border: 1px solid #EEEFF4;
+    margin: 70px 0;
+}
+
+@media (max-width: 768px) {
+    .hr-template {
+        margin-top: 32px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hr-template {
+        margin-bottom: 32px;
+    }
+}

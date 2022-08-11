@@ -1,21 +1,5 @@
 @mixin button {
-    transition: all .1s linear;
-    background-color: $button1;
-    border: none;
-    height: 50px;
-    border-radius: 3px;
-    font-weight: 600;
-    font-size: 16px;
-    color: white;
-    padding: 0 20px;
-    letter-spacing: 0.3px;
-    &:hover {
-        background-color: #50C0CE;
-        cursor: pointer;
-    }
-    &:active {
-        background-color: #177985;
-    }
+
 }
 
 @mixin heading {

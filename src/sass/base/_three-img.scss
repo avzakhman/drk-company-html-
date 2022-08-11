@@ -1,0 +1,24 @@
+.three-img {
+    margin-top: 70px;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    &__block {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .three-img {
+        margin-top: 30px;
+    } 
+}
+
+@media (max-width: 768px) {
+    .three-img {
+        grid-template-columns: 1fr;
+    }
+}

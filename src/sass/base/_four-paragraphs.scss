@@ -1,0 +1,35 @@
+.four-paragraphs {
+    &__wrapper {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 11%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .four-paragraphs {
+        &__wrapper {
+            grid-template-columns: 1fr;
+            grid-template-rows: unset;
+            grid-gap: 20px;
+        }
+        &__paragraph {
+            h3 {
+                margin-bottom: 10px;
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .four-paragraphs {
+        &__paragraph {
+            h3 {
+                font-size: 16px;
+            }
+        }
+    }  
+}

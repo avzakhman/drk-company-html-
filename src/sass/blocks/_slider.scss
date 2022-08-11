@@ -9,15 +9,29 @@
         background-color: transparent;
         border: 2px solid $button1;
         border-radius: 3px;
+        &:hover {
+            border: 2px solid $hover;
+
+        }
     }
     .slick-prev {
-        left: 0;
-        background: url(../icons/prev.svg) center / 60% no-repeat;
+        left: 0px;
+        background: url(../../icons/link_arr.svg) center / 22px 11px no-repeat;
+        transform: rotate(180deg);
+
+        &:hover {
+            background: url(../../icons/link_arr_pressed.svg) center / 22px 11px no-repeat;
+            background-color: transparent;
+        }
     }
     .slick-next {
-        right: 0;
-        background: url(../icons/next.svg) center / 60% no-repeat;
-
+        right: 0px;
+        transform: rotate(0deg);
+        background: url(../../icons/link_arr.svg) center / 22px 11px no-repeat;
+        &:hover {
+            background: url(../../icons/link_arr_pressed.svg) center / 22px 11px no-repeat;
+            background-color: transparent;
+        }
     }
 } 
 

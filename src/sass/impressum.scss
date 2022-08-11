@@ -1,0 +1,60 @@
+@import 'base/variables';
+@import 'base/mixins';
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+    transition: all 0.2s;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+section {
+    max-width: 100%;
+    overflow: hidden;
+}
+header {
+    max-width: 100%;
+    overflow: hidden;
+}
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+main {
+    padding-top: 189px;
+}
+
+@media(max-width: 1200px) {
+    .container {
+        padding: 0 50px;
+    }
+}
+@media(max-width: 1024px) {
+    main {
+        padding-top: 91px;
+    }
+    .container {
+        max-width: 768px;
+        padding: 0 45px;
+    }
+}
+@media(max-width: 576px) {
+    .container {
+        max-width: 360px;
+        padding: 0 15px;
+    }
+}
+
+@import 'base/templates';
+@import 'base/select-template';
+@import 'blocks/header';
+@import 'base/cookies';
+@import 'blocks/menu';
+@import 'blocks/form';
+@import 'blocks/footer';
+
+@import 'blocks/impressum-page/impressum-page';
+

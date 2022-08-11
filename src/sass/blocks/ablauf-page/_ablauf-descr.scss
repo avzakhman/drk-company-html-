@@ -1,0 +1,144 @@
+.ablauf-descr {
+    p {
+        max-width: 669px;
+        margin-top: 30px;
+    }
+}
+
+.ablauf-articles {
+    display: flex;
+    flex-direction: column;
+}
+
+.ablauf-article {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    &__descr {
+        max-width: 664px;
+    }
+    &__image {
+        max-width: 370px;
+        height: max-content;
+        img {
+            width: 100%;
+        }
+    }
+    &:nth-child(2n + 1) {
+        flex-direction: row;
+    }
+    &:nth-child(1) {
+        p, li {
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style: none;
+        }
+        li {
+            position: relative;
+            margin-left: 45px;
+            &::before {
+                left: -45px;
+                display: block;
+                position: absolute;
+                content: '';
+                width: 24px;
+                height: 24px;
+                background: url(../../../icons/сheck.svg) center / cover no-repeat;
+            }
+        }
+    }
+    &:nth-child(2) {
+        p{
+            margin-bottom: 5px;
+        }
+    }
+    &:nth-child(n + 4) {
+        p, ul{
+            margin-bottom: 5px;
+        }
+        li {
+            margin-left: 25px;
+        }
+    }
+    h2 {
+        margin-bottom: 20px;
+    }
+    ul {
+        list-style: disc;
+    }
+}
+
+@media(max-width: 1024px) {
+    .ablauf-descr {
+        h1 {
+            font-size: 44px;
+        }
+        p {
+            margin-top: 18px;
+        }
+    }
+    .ablauf-article {
+        margin-top: 76px;
+        margin-bottom: 0;
+        flex-direction: column-reverse;
+        position: relative;
+        h2 {
+            margin-left: 8px;
+            font-size: 24px;
+            margin-top: -345px;
+            position: absolute;
+        }
+        &__image {
+            max-width: 445px;
+            margin: 20px 0 9px 0;
+        }
+        &:nth-child(2n + 1) {
+            flex-direction: column-reverse;
+
+        }
+    }
+}
+
+@media(max-width: 576px) {
+    .ablauf-descr {
+        h1 {
+            font-size: 24px;
+        }
+        p {
+            margin-top: 8px;
+        }
+    }
+    .ablauf-article {
+        margin-top: 40px;
+        margin-bottom: 0;
+        p {
+            margin-bottom: 8px;
+        }
+        &__descr {
+            width: 100%;
+        }
+        h2 {
+            margin-left: 8px;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 0.02em;
+            margin-top: -250px;
+        }
+        &__image {
+            max-width: 445px;
+            margin: 20px 0 9px 0;
+        }
+        &:nth-child(2n + 1) {
+            flex-direction: column-reverse;
+
+        }
+        &:nth-child(n) {
+            p, li {
+                margin-bottom: 8px;
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+.auftragsformular {
+    h1 {
+        margin-top: 41px;
+        display: block;
+        max-width: 767px;
+    }
+    &__wrapper {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        p {
+            width: 559px;
+            span {
+                display: block;
+                margin-top: 20px;
+                button {
+                    margin-top: 10px;
+                }
+            }
+        }   
+        ul {
+            margin-top: 14px;
+            width: 470px;
+            margin-right: -30px;
+            li {
+                margin-bottom: 5px;
+            }
+        }
+    }
+    .h-button-template {
+        width: 175px;
+    }
+} 
+
+@media(max-width: 1200px) {
+    .auftragsformular {
+        &__wrapper {
+            flex-direction: column;
+            p {
+                width: 100%;
+            }
+            ul {
+                margin-top: 20px;
+                width: 100%;
+            }
+        }
+    } 
+}
+
+@media(max-width: 1024px) {
+    .auftragsformular {
+        &__wrapper {
+            flex-direction: column;
+            p {
+                width: 100%;
+            }
+            ul {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media(max-width: 576px) {
+    .auftragsformular {
+        h1 {
+            font-size: 24px;
+        }
+    }
+}

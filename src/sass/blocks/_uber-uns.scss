@@ -4,6 +4,7 @@
     min-height: 443px;
     &__wrapper {
         position: relative;
+        width: 97.5%;
         z-index: 2;
         padding-top: 68px;
         display: flex;
@@ -11,11 +12,7 @@
     }
     &__paragraph {
         max-width: 660px;
-        h2 {
-            @include heading
-        }
         p {
-            @include text_16;
             margin-top: 31px;
         }
     }
@@ -35,8 +32,6 @@
         }
         p {
             width: 271px;
-            @include text_16;
-            line-height: 165%;
             padding-bottom: 12px;
         }
     }
@@ -46,26 +41,45 @@
         width: 100%;
         &_1 {
             position: absolute;
-            top: 18px;
-            right: 20%;
+            top: 23px;
+            right: 12%;
         }
         &_2 {
             position: absolute;
             top: 74px;
-            right: 17%;
+            right: 8%;
         }
         &_3 {
             position: absolute;
             height: 128px;
             width: 128px;
             top: 239px;
-            right: 11%;
+            right: 0%;
 
         }
     }
 }
-
-@media(max-width: 1240px) {
+@media(max-width: 1200px) {
+    .uber-uns {
+        &__paragraph {
+            max-width: 550px;
+        }
+        &__number {
+            max-width: 300px;
+        }
+        &__numbers {
+            h3 {
+                padding-top: 10px;
+                width: 100%;
+            }
+            p {
+                font-size: 14px;
+                width: 100%;
+            }
+        }
+    }
+}
+@media(max-width: 1024px) {
     .uber-uns {
         min-height: 451px;
         &__wrapper {
@@ -75,6 +89,7 @@
         &__paragraph {
             max-width: 100%;
             h2 {
+                font-size: 44px;
                 position: absolute;
                 top: 40px;
             }
@@ -120,31 +135,28 @@
                 right: 17%;
             }
             &_3 {
-                position: absolute;
-                height: 128px;
-                width: 128px;
-                top: 239px;
-                right: 11%;
+                display: none;
     
             }
         }
     }
 }
 
-@media(max-width: 576px) {
+@media(max-width: 767px) {
     .uber-uns {
-        min-height: 846px;
+        min-height: 700px;
         &__wrapper {
             padding-top: 90px;
         }
         &__paragraph {
             h2 {
                 top: 30px;
+                font-size: 30px;
             }
             p {
                 margin-top: 20px;
                 line-height: 170%;
-
+                margin-bottom: 35px;
             }
         }
         &__number {
@@ -165,6 +177,17 @@
         }
         &__decoration {
             display: none;
+        }
+    }
+}
+
+@media(max-width: 576px) {
+    .uber-uns {
+        &__paragraph {
+            h2 {
+                margin-top: 0px;
+                font-size: 24px;
+            }
         }
     }
 }

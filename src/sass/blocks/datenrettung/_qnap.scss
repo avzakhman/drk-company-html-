@@ -1,0 +1,116 @@
+.qnap-descr {
+    margin-bottom: 70px;
+    &__wrapper {
+        margin-top: 31px;
+        display: grid;
+        &_1 {
+            grid-area: block1;
+        }
+        &_2 {
+            grid-area: block2;
+        }
+        &_3 {
+            grid-area: block3;
+        }
+        grid-template-areas: "block1 block2"
+                             "block3 block2";
+        p {
+            max-width: 669px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.qnap-paragraph-and-ul {
+    .paragraph-and-ul__texts {
+        ul {
+            li {
+                list-style: disc;
+                &::before {
+                    display: none;
+                }
+                margin-left: 25px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .paragraph-and-ul__points {
+        a {
+            font-size: 16px;
+            text-decoration: underline;
+            font-weight: 500;
+        }
+    }
+}
+
+.qnap_paragraph-and-ul__points {
+    h3 {
+        margin-left: -25px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .qnap-descr {
+        &__wrapper {
+            grid-gap: 100px;
+            &_3 {
+                margin-top: -90px;
+            }
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .qnap-descr {
+        margin-bottom: 0;
+        &__wrapper {
+            grid-gap: 20px;
+            grid-template-areas: "block2 block1"
+                                 "block3 block3";
+            &_3 {
+                margin-top: 0px;
+            }
+            &_2 {
+                max-width: 324px;
+            }
+        }
+    }
+    .qnap-paragraph-and-ul {
+        .paragraph-and-ul__points {
+            display: flex;
+            flex-direction: column;
+            h3 {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .qnap_paragraph-and-ul__points {
+        h3 {
+            margin-left: -0px;
+        }
+    }
+    
+    
+}
+@media (max-width: 768px) {
+    .qnap-descr {
+        &__wrapper {
+            grid-gap: 20px;
+            grid-template-areas: "block2"
+                                 "block1"
+                                 "block3";
+            p {
+                margin: 0;
+            }
+            &_3 {
+                margin-left: 0px;
+            }
+            &_2 {
+                max-width: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}

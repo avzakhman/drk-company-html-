@@ -1,0 +1,138 @@
+.wd-descr {
+    margin-bottom: 70px;
+    &__wrapper {
+        margin-top: 31px;
+        display: grid;
+        &_1 {
+            grid-area: block1;
+        }
+        &_2 {
+            grid-area: block2;
+        }
+        &_3 {
+            grid-area: block3;
+        }
+        grid-template-areas: "block1 block2"
+                             "block3 block2";
+        p {
+            max-width: 669px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.wd-paragraph-and-ul {
+    .paragraph-and-ul__block-wrapper {
+        div {
+            width: 50%;
+        }
+        ul {
+            li {
+                margin-bottom: 11px;
+            }
+        }
+        .paragraph-and-ul__points{
+            margin-left: 2px;
+            margin-top: 0;
+        }
+    }
+}
+
+.wd-paragraph-and-ul-2 {
+    .paragraph-and-ul__texts {
+        ul {
+            li {
+                &::before {
+                    display: none;
+                }
+                list-style: disc;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .paragraph-and-ul__points {
+        h3 {
+            margin-left: -27px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .wd-descr {
+        &__wrapper {
+            grid-gap: 100px;
+            &_3 {
+                margin-top: -90px;
+            }
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .wd-descr {
+        margin-bottom: 0;
+        &__wrapper {
+            grid-gap: 20px;
+            grid-template-areas: "block2 block1"
+                                 "block3 block3";
+            &_3 {
+                margin-top: 0px;
+            }
+            &_2 {
+                max-width: 324px;
+            }
+        }
+    }
+    .wd-paragraph-and-ul-2 {
+        .paragraph-and-ul__texts {
+            ul {
+                margin-top: -20px;
+            }
+        }
+        .paragraph-and-ul__points {
+            margin-top: 0px;
+            flex-direction: column;
+            h3 {
+                margin-left: 0px;
+            }
+        }
+    }
+    .wd-paragraph-and-ul {
+        h3 {
+            font-size: 24px;
+            margin-bottom: -20px;
+        }
+        .paragraph-and-ul__block-wrapper {
+            div {
+                width: 100%;
+            }
+            ul {
+                width: 100%;
+            }
+        }
+
+    }
+}
+@media (max-width: 768px) {
+    .wd-descr {
+        &__wrapper {
+            grid-gap: 20px;
+            grid-template-areas: "block2"
+                                 "block1"
+                                 "block3";
+            p {
+                margin: 0;
+            }
+            &_3 {
+                margin-left: 0px;
+            }
+            &_2 {
+                max-width: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+    
+}

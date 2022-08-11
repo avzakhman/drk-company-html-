@@ -1,36 +1,53 @@
+window.addEventListener('DOMContentLoaded', ()=> {
 
-const button = document.querySelector('.header__datenrettung');
-const links = document.querySelectorAll('.header__desktop-link');
-const menu = document.querySelector('.menu');
-button.addEventListener('click', ()=> {
-    button.classList.toggle('header__datenrettung_active');
-    links.forEach((link)=> {
-        link.classList.toggle('header__desktop-link_hidden');
-    });
-    menu.classList.toggle('menu__active');
-})
+    //функция открытия / закрытия окна
+    const toggleFormWindow = function() {
+        const openForm = document.querySelectorAll('.trigger-form'),
+            formWindow = document.querySelector('.form-window'),
+            closeForm = document.querySelector('#form-close');
+        openForm.forEach((button) => {
+            button.addEventListener('click', ()=> {
+                formWindow.classList.add('form-window__active');
+            })
+        })
+        closeForm.addEventListener('click', ()=> {
+            formWindow.classList.remove('form-window__active');
+        })
+    }
 
+    toggleFormWindow();
 
+    const toggleFormStatusWindow = function() {
+        const openStatus = document.querySelectorAll('.open-status'),
+            statusWindow = document.querySelector('.form-status'),
+            formWindow = document.querySelector('.form-window'),
+            closeStatus = document.querySelector('#form-status-close');
+        openStatus.forEach((button) => {
+            button.addEventListener('click', ()=> {
+                formWindow.classList.remove('form-window__active');
+                statusWindow.classList.add('form-status__active');
+            })
+        });
+        closeStatus.addEventListener('click', ()=> {
+            statusWindow.classList.remove('form-status__active');
+        });
+    }
 
-const langButton = document.querySelector('.header__sprache');
-const langLinks = document.querySelector('.header__sprache-menu');
-langButton.addEventListener('click', ()=> {
-    langLinks.classList.toggle('header__sprache-menu_active');
+    toggleFormStatusWindow();
+        
+    const toggleInput = function(input, option_1, option_2, classToToggle) {
+        const   firmaInput = document.querySelector(input),
+                firma = document.querySelector(option_1),
+                privat = document.querySelector(option_2);
+        firma.addEventListener('click', ()=> {
+            firmaInput.classList.remove(classToToggle);
+        })
+        privat.addEventListener('click', ()=> {
+            firmaInput.classList.add(classToToggle);
+        })
+    }
+
+    toggleInput('#firma-input', '#firma', '#privat', 'diagnose-form__hidden');
+    toggleInput('#window-firma-input', '#window-firma', '#window-privat', 'diagnose-form__hidden');
+
 });
-
-
-const tabs = document.querySelectorAll('.fragen-tabs__card');
-
-tabs.forEach((tab)=> {
-    tab.addEventListener('click', ()=> {
-        let tabParagraph = tab.querySelector('.fragen-tabs__content'),
-            button = tab.querySelector('.fragen-tabs__open');
-        tabParagraph.classList.toggle('fragen-tabs__content_active');
-        button.classList.toggle('fragen-tabs__open_active');
-
-    })
-});
-
-// tab.addEventListener('click', ()=> {
-//     tabParagraph.classList.toggle('fragen-tabs__content_active');
-// })

@@ -1,0 +1,36 @@
+.agb {
+    margin-bottom: 40px;
+    h1 {
+        margin-bottom: 30px;
+    }
+    &__blue {
+        margin-top: 30px;
+        background-color: $background;
+        padding: 30px;
+        padding-bottom: 1px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .agb {
+        h1 {
+            font-size: 44px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 24px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .agb {
+        h1 {
+            font-size: 32px;
+        }
+        h2 {
+            font-size: 16px;
+        }
+    }
+}

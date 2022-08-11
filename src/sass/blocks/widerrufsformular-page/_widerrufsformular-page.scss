@@ -1,0 +1,109 @@
+.widerrufsformular {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 68px;
+    button {
+        width: max-content;
+    }
+    &__line {
+        display: flex;
+        align-items: flex-end;
+        p {
+            display: block;
+            width: max-content;
+            white-space: nowrap;
+
+        }
+        &_mobile {
+            display: none;
+        }
+    }
+    &__small-lines {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        .widerrufsformular__line {
+            align-items: start;
+            display: flex;
+            flex-direction: column;
+            margin-right: 21%;
+            .widerrufsformular__hr {
+                margin-top: 20px;
+            }
+            &:first-child {
+                .widerrufsformular__hr {
+                    width: 128px;
+                }
+            }
+        }
+    }
+    &__hr {
+        margin-bottom: 7px;
+        border: 0;
+        background-color: #C4C4C4;
+        height: 1px;
+        width: 100%;
+        display: inline;
+    }
+}
+
+@media(max-width: 1024px) {
+    .widerrufsformular {
+        button {
+            align-self: flex-end;
+        }
+        h1 {
+            font-size: 44px;
+            margin-bottom: 10px;
+        }
+        &__small-lines {
+            .widerrufsformular__line {
+                margin-right: 0;
+                &:first-child {
+                    .widerrufsformular__hr {
+                        width: 206px;
+                    }
+                }
+                &:last-child {
+                    .widerrufsformular__hr {
+                        width: 324px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 576px) {
+    .widerrufsformular {
+        margin-bottom: 32px;
+        button {
+            width: 100%;
+        }
+        h1 {
+            font-size: 32px;
+        }
+        &__line {
+            &_mobile {
+                display: flex;
+            }
+        }
+        &__small-lines {
+            flex-direction: column;
+            .widerrufsformular__line {
+                margin-right: 0;
+                &:first-child {
+                    .widerrufsformular__hr {
+                        width: 206px;
+                    }
+                }
+                &:last-child {
+                    .widerrufsformular__hr {
+                        width: 206px;
+
+                    }
+                }
+            }
+        }
+    }
+}

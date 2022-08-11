@@ -1,0 +1,45 @@
+.brands-slider {
+    overflow: visible;
+    &__block {
+        // background-color:aqua;
+        width: 190px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 35px;
+        img {
+            width: 100%;
+        }
+        p {
+            text-align: center;
+            margin-top: 10px;
+        }
+    }
+    .slick-prev {
+        left: -3%;            
+        background: url(../img/datenrettung/festplatte/Left.svg) center / 24px 24px no-repeat;
+    }
+    .slick-next {
+        right: -3%;
+        transform: rotate(180deg);
+        background: url(../img/datenrettung/festplatte/Left.svg) center / 24px 24px no-repeat;
+    }
+    .slick-arrow {
+        cursor: pointer;
+        position: absolute;
+        bottom: 28%;
+        height: 40px;
+        width: 40px;
+        font-size: 0;
+        border: none;
+    }
+}
+// @media(max-width: 768px) {
+//     .brands-slider {
+//         overflow: visible;
+//         &__block {
+//             width: 190px;
+//             margin: 0;
+//         }
+//     }
+// }

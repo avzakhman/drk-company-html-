@@ -1,0 +1,59 @@
+.preise-paragraphs {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    ul {
+        margin-top: 5px;
+        list-style: disc;
+        margin-left: 25px;
+    }
+    &__block {
+        width: 40%;
+        p {
+            width: 100%;
+        }
+        &:last-child {
+            width: 39%;
+        }
+    }
+}
+
+@media(max-width: 1024px) {
+    .preise {
+        h1 {
+            font-size: 44px;
+        }
+    }
+
+    .preise-paragraphs {
+        margin-top: 20px;
+        flex-direction: column;
+        ul {
+            margin-top: 5px;
+            list-style: disc;
+            margin-left: 25px;
+        }
+        &__block {
+            margin-bottom: 10px;
+            width: 100%;
+            p {
+                width: 100%;
+            }
+            &:last-child {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media(max-width: 576px) {
+    .preise {
+        h1 {
+            font-size: 24px;
+        }
+    }
+    .preise-paragraphs {
+        margin-top: 8px;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,146 @@
+.paragraph-and-ul {
+    h2 {
+        width: 57%;
+    }
+    &__block {
+        margin-top: 40px;
+        h3 {
+            width: 48%;
+        }
+    }
+    &__block-wrapper {
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        div {
+            &:first-child {
+                width: 55%;
+                li {
+                    margin-left: 32px;
+                }
+            }
+            &:last-child {
+                width: 32.5%;
+            }
+        }
+    }
+    &__texts {
+        p {
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        h3 {
+            &:first-child {
+                margin-top: 0;
+            }
+            margin-top: 40px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    li {
+        margin-bottom: 22px;
+        position: relative;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: -30px;
+            width: 24px;
+            height: 24px;
+            background: url(../img/datenrettung/festplatte/li.svg) center / cover no-repeat;
+        }
+    }
+    &__points {
+        display: flex;
+        flex-direction: column;
+        
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 160%;
+            letter-spacing: 0.02em;
+        }
+        h3 {
+            width: 100%;
+            margin-top: 20px;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 140%;
+            letter-spacing: 0.02em;
+        }
+        a {
+            text-decoration: none;
+            font-size: 24px;
+        }
+        span {
+            display: block;
+            margin-top: -5px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .paragraph-and-ul {
+        h2 {
+            width: 100%;
+        }
+        &__block {
+            h3 {
+                width: 100%;
+                font-size: 24px;
+            }
+        }
+        &__block-wrapper {
+            flex-direction: column;
+            div {
+                &:first-child {
+                    width: 100%;
+                    li {
+                        margin-left: 32px;
+                    }
+                }
+                &:last-child {
+                    width: 100%;
+                }
+            }
+        }
+        &__texts {
+            h3 {
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+        }
+        &__points {
+            width: 100%;
+            margin-top: 20px;
+            flex-direction: row;
+            justify-content: space-between;
+            li {
+                margin-bottom: 9px;
+                margin-left: 30px;
+                max-width: 339px;
+            }
+            &_tel {
+                flex-direction: column;
+            }
+
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .paragraph-and-ul {
+        &__points {
+            flex-direction: column;
+            li {
+                max-width: 100%;
+            }
+        }
+    }
+}

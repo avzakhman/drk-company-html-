@@ -1,0 +1,224 @@
+.privatkunden-descr {
+    &__wrapper {
+        margin-top: 30px;
+        margin-bottom: 40px;
+        display: grid;
+        grid-template-columns: 659px 370px;
+        justify-content: space-between;
+        grid-template-areas:    "block1 block3"
+                                "block2 block3";
+        &_1 {
+            grid-area: block1;
+        }
+        &_2 {
+            grid-area: block2;
+        }
+        &_3 {
+            grid-area: block3;
+        }
+    }
+}
+
+.paragraph-and-ul { 
+    .paragraph-and-ul__points {
+        span {
+            font-weight: 700;
+            color: black;
+            display: inline;
+        }
+        p {
+            margin-bottom: 15px;
+            margin-left: 15px;
+        }
+        ul {
+            margin-left: 45px;
+        }
+        a {
+            font-size: 16px;
+            font-weight: 400;
+            text-decoration: underline;
+        }
+    }
+}
+
+.kundenbewertungen {
+    padding-bottom: 50px;
+    margin-bottom: -60px;
+    .warum-wir-paragraph {
+        max-width: 570px;
+        margin-left: 0;
+        width: 100%;
+        margin-bottom: 48px;
+        &::before {
+            display: none;
+        }
+    }
+    .kundenbewertungen__video {
+        margin-top: 298px;
+    }
+    .slick-arrow {
+        bottom: 20px;
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .paragraph-and-ul { 
+        margin-top: -40px;
+        .paragraph-and-ul__points {
+            p {
+                margin-left: -30px;
+            }
+            ul {
+                margin-left: -10px;
+            }
+        }
+    }
+    .kundenbewertungen {
+        margin-bottom: -100px;
+        .slick-arrow {
+            bottom: 50px;
+        }
+        .slick-prev {
+            top: unset;
+        }
+        .slick-next {
+            top: unset;
+        }
+    
+    }
+    .privatkunden-descr {
+        &__wrapper {
+            margin-top: 30px;
+            margin-bottom: 40px;
+            display: grid;
+            grid-template-columns: 55% 31%;
+            grid-gap: unset;
+            grid-template-areas:    "block1 block3"
+                                    "block2 block3";
+            &_3 {
+                margin-left: -90px;
+                grid-area: block3;
+                object-fit: contain;
+            }
+        }
+    }
+}
+@media(max-width: 1024px) {
+    .privatkunden-descr {
+        margin-bottom: 0;
+        &__wrapper {
+            grid-gap: 20px;
+            grid-template-areas: "block3 block1"
+                                 "block2 block2";
+            &_3 {
+                margin-left: 0px;
+                width: 324px;
+                object-fit: cover;
+            }
+            &_1 {
+                margin-left: -100px;
+            }
+        }
+    } 
+    hr {
+        display: none;
+    }
+    .paragraph-and-ul {
+        margin-top: -65px;
+        .paragraph-and-ul__points {
+            flex-direction: column;
+            p {
+                margin-left: 0px;
+            }
+            ul {
+                li {
+                    max-width: unset;
+                }
+                margin-left: 0px;
+            }
+        }
+    }
+    .kundenbewertungen {
+        padding-bottom: 50px;
+        margin-bottom: -60px;
+        .warum-wir-paragraph {
+            display: none;
+        }
+        .kundenbewertungen__video {
+            margin-top: 100px;
+        }
+        .slick-arrow{
+            top: 300px;
+
+        }
+    }
+    .analyse {
+        margin-top: 0px;
+        .button-template {
+            margin-top: 20px;
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .kundenbewertungen {
+        .slick-arrow{
+            top: 240px;
+
+        }
+    }
+    .privatkunden-descr {
+        margin-bottom: 0;
+        &__wrapper {
+            grid-gap: 20px;
+            grid-template-columns: 1fr;
+            grid-template-areas:    "block3"
+                                    "block1"
+                                    "block2";
+            p {
+                margin: 0;
+            }
+            &_1 {
+                max-width: 100%;
+                width: 100%;
+            }
+            &_3 {
+                max-width: 100%;
+                margin-left: 0px;
+                width: 100%;
+
+            }
+            &_2 {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media(max-width: 576px) {
+    .analyse {
+        margin-top: 40px;
+    }
+    .paragraph-and-ul { 
+        .paragraph-and-ul__points {
+            a {
+                display: block;
+            }
+        }
+    }
+    .kundenbewertungen {
+        padding-bottom: 50px;
+        margin-bottom: -60px;
+        .warum-wir-paragraph {
+            display: none;
+        }
+        .kundenbewertungen__video {
+            margin-top: 0px;
+        }
+        .slick-arrow{
+            top: 660px;
+        }
+    }
+}

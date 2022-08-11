@@ -1,0 +1,148 @@
+.san-descr {
+    margin-bottom: 70px;
+    &__wrapper {
+        margin-top: 31px;
+        display: grid;
+        justify-content: space-between;
+        &_1 {
+            grid-area: block1;
+        }
+        &_2 {
+            grid-area: block2;
+        }
+        &_3 {
+            margin-top: 10px;
+            grid-area: block3;
+        }
+        &_4 {
+            grid-area: block4;
+        }
+        &_5 {
+            grid-area: block5;
+            max-width: 370px;
+        }
+        &_6 {
+            grid-area: block6;
+            max-width: 370px;
+            margin-top: -60px; 
+            li {
+                margin-bottom: 20px;
+                margin-left: 32px;
+                position: relative;
+                &::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: -30px;
+                    width: 24px;
+                    height: 24px;
+                    background: url(../img/datenrettung/festplatte/li.svg) center / cover no-repeat;
+                }
+            }
+        }
+        grid-template-areas: "block1 block5"
+                             "block2 block5"
+                             "block3 block6"
+                             "block4 block6";
+
+        p {
+            max-width: 669px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.paragraph-and-ul__points {
+    p {
+        margin-bottom: 20px;
+        margin-left: -27px;
+    }
+}
+@media (max-width: 1200px) {
+    .san-descr {
+        &__wrapper {
+            grid-gap: -10px;
+            p {
+                max-width: 590px;
+            }
+            &_1 {
+                max-width: 590px;
+            }
+            &_2 {
+                max-width: 590px;
+            }
+            &_3 {
+                max-width: 590px;
+            }
+            &_4 {
+                max-width: 590px;
+            }
+            &_5 {
+                max-width: 300px;
+            }
+            &_6 {
+                margin-top: -180px;
+                max-width: 300px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .san-descr {
+        margin-bottom: 0;
+        &__wrapper {
+            grid-gap: 20px;
+            grid-template-areas: "block5 block1"
+                                 "block2 block2"
+                                 "block6 block6"
+                                 "block3 block3"
+                                 "block4 block4";
+
+            &_1 {
+                max-width: 100%;
+            }
+            &_2 {
+                max-width: 100%;
+            }
+            &_3 {
+                max-width: 100%;
+                margin-top: -10px;
+                margin-bottom: 10px;
+                
+
+            }
+            &_4 {
+                max-width: 100%;
+            }
+            &_5 {
+                max-width: 100%;
+            }
+            &_6 {
+                margin-top: 0px;
+                max-width: 100%;
+            }
+            p {
+                width: unset;
+                max-width: unset;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .san-descr {
+        &__wrapper {
+            grid-gap: 20px;
+            grid-template-areas: "block5"
+                                 "block1"
+                                 "block2"
+                                 "block6"
+                                 "block3"
+                                 "block4";
+            &_5 {
+                width: 100%;
+            }
+        }
+    }
+}

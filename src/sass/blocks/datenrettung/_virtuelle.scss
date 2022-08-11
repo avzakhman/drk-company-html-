@@ -1,0 +1,131 @@
+.virtuelle-descr {
+    margin-bottom: 80px;
+    &__wrapper {
+        margin-top: 31px;
+        display: grid;
+        &_1 {
+            grid-area: block1;
+        }
+        &_2 {
+            grid-area: block2;
+        }
+        &_3 {
+            grid-area: block3;
+        }
+        grid-template-areas: "block1 block2"
+                             "block3 block2";
+        p {
+            max-width: 669px;
+            margin-bottom: 10px;
+        }
+    }
+}
+.virtuelle-paragraph-and-ul__points {
+
+    p {
+        margin-left: -24px;
+        margin-bottom: 20px;
+    }
+}
+
+.virtuelle-ul-and-img {
+    ul {
+        margin-bottom: 10px;
+        li {
+            margin-left: 20px;
+            margin-bottom: 0;
+            &:before {
+                width: 4px;
+                height: 4px;
+                background-image: none;
+                background-color: $text1;
+                border-radius: 100%;
+                top: 11px;
+                left: -16px;
+            }
+        }
+    }
+    .ul-and-img__img {
+        p {
+            width: 368px;
+            margin-top: 30px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .virtuelle-descr {
+        &__wrapper {
+            grid-gap: 100px;
+            &_3 {
+                margin-top: -90px;
+            }
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .virtuelle-descr {
+        &__wrapper {
+            grid-gap: 20px;
+            grid-template-areas: "block2 block3"
+                                 "block1 block1";
+            &_3 {
+                margin-top: 0px;
+            }
+            &_2 {
+                max-width: 324px;
+            }
+        }
+    }
+    .virtuelle-paragraph-and-ul__points {
+        p {
+            margin-left: 0px;
+        }
+    }
+    .virtuelle-ul-and-img {
+        .ul-and-img__block-wrapper {
+            flex-direction: column-reverse;
+        }
+        .ul-and-img__img {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 30px;
+            margin-bottom: 30px;
+            p {
+                width: 100%;
+                margin-top: 0px;
+            }
+        }
+    }
+    
+}
+@media (max-width: 768px) {
+    .virtuelle-descr {
+        &__wrapper {
+            grid-gap: 20px;
+            grid-template-areas: "block2"
+                                 "block1"
+                                 "block3";
+            &_3 {
+                margin-left: 0px;
+            }
+            &_2 {
+                max-width: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+    .virtuelle-ul-and-img {
+        .ul-and-img__block-wrapper {
+            flex-direction: column-reverse;
+        }
+        .ul-and-img__img {
+            display: block;
+            img {
+                margin-bottom: 16px;
+            }
+        }
+    }
+}

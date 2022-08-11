@@ -1,0 +1,112 @@
+.express-servise-paragraph-and-ul {
+    margin-bottom: 76px;
+    ul {
+        display: flex;
+        flex-direction: column;
+        div {
+            width: 100%;
+            &:last-child {
+                width: 100%;
+                margin-left: 12px;
+            }
+        }
+        li {
+            width: 100%;
+            margin-left: 20px;
+            margin-bottom: 0px;
+            &:before {
+                display: none;
+            }
+            list-style: disc;
+        }
+    }
+
+}
+
+.ul-and-img__img_hidden {
+    display: none;
+} 
+
+.ul-and-img {
+    &__block {
+        margin-bottom: 70px;
+        &:nth-child(2n) {
+            .ul-and-img__block-wrapper {
+                display: flex;
+                flex-direction: row-reverse;
+            }
+        }
+    }
+}
+@media(max-width: 1024px) {
+    .ul-and-img {
+        h3 {
+            font-size: 24px;
+        }
+        &__block {
+            margin-bottom: 0px;
+        }
+    }
+    .express-servise-paragraph-and-ul {
+        .paragraph-and-ul__points {
+            flex-direction: column;
+            margin-top: 0px;
+        }
+        ul {
+            display: flex;
+            flex-direction: row;
+            margin-left: -15px;
+            li {
+                margin-left: 0;
+            }
+        }
+        margin-bottom: 10px;
+    }
+    .ul-and-img__block {
+        margin-bottom: -20px;
+
+    }
+
+}
+@media(max-width: 576px) {
+    .express-servise-paragraph-and-ul {
+        .paragraph-and-ul__block {
+            margin-top: 0;
+        }
+        h3 {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        ul {
+            margin-top: 10px;
+            flex-direction: column;
+            li {
+                margin-left: 20px;
+            }
+        }
+        margin-bottom: 20px;
+    }
+    .ul-and-img {
+        &__block {
+            margin-bottom: 20px;
+            &:nth-child(2n) {
+                .ul-and-img__block-wrapper {
+                    flex-direction: column;
+                }
+            }
+        }
+        &__block-wrapper {
+            flex-direction: column;
+        }
+    }
+    .ul-and-img__img_hidden {
+        display: block;
+        margin-bottom: 16px;
+    } 
+
+    .analyse {
+        button {
+            margin-top: 16px;
+        }
+    }
+}

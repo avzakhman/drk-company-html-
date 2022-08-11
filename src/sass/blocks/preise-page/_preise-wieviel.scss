@@ -1,0 +1,99 @@
+.preise-wieviel {
+    h2 {
+        max-width: 380px;
+    }
+    &__wrapper {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__block {
+        p {
+            margin-bottom: 10px;
+        }
+        a {
+            font-weight: 400;
+        }
+        ul {
+            margin: 10px 0 10px 40px;
+            li {
+                position: relative;
+                padding: 10px 0;
+                &::before {
+                    position: absolute;
+                    display: block;
+                    content: '';
+                    width: 24px;
+                    height: 24px;
+                    background-color: red;
+                    top: 12px;
+                    left: -40px;
+                    background: url(../../../icons/сheck.svg) 0 0 / 24px 24px no-repeat;
+                }
+            }
+        }
+        &:first-child {
+            width: 57%;
+        }
+        &:last-child {
+            width: 31%;
+        }
+    }
+}
+
+@media(max-width: 1024px) {
+
+    .preise-wieviel {
+        h2 {
+            font-size: 44px;
+        }
+        &__wrapper {
+            margin-top: 20px;
+            flex-direction: column;
+        }
+        &__block {
+            h3 {
+                font-size: 24px;
+            }
+            &:first-child {
+                width: 100%;
+            }
+            &:last-child {
+                margin-top: 10px;
+                width: 442px;
+            }
+        }
+    }
+    
+}
+
+@media(max-width: 576px) {
+    .preise-wieviel {
+        h2 {
+            font-size: 32px;
+        }
+        &__wrapper {
+            margin-top: 8px;
+        }
+        &__block {
+            h3 {
+                font-size: 16px;
+                font-weight: 700;
+            }
+            li {
+                &:first-child {
+                    a {
+                        display: block;
+                    }
+                }
+            }
+            &:first-child {
+                width: 100%;
+            }
+            &:last-child {
+                width: 100%;
+            }
+        }
+    }
+    
+}

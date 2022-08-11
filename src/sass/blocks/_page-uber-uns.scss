@@ -1,0 +1,332 @@
+.uber-uns-descr {
+    &__wrapper {
+        margin-top: 30px;
+        margin-bottom: 40px;
+        display: grid;
+        grid-column-gap: 30px;
+        justify-content: space-between;
+        grid-template-areas:    "block1 block4"
+                                "block2 block4"
+                                "block3 block4";
+        &_1 {
+            max-width: 659px;
+            grid-area: block1;
+        }
+        &_2 {
+            max-width: 659px;
+            grid-area: block2;
+        }
+        &_3 {
+            max-width: 659px;
+            grid-area: block3;
+        }
+        &_4 {
+            max-width: 370px;
+            grid-area: block4;
+        }
+    }
+}
+
+.uber-uns-ul-and-img {
+    h2 {
+        margin-bottom: 30px;
+    }
+    h3 {
+        margin-bottom: 20px;
+    }
+    ul {
+        display: flex;
+        justify-content: space-between;
+        li {
+            margin-left: 30px;
+            margin-bottom: 0;
+            &:before {
+                display: none;
+            }
+            list-style: disc;
+        }
+    }
+    margin-bottom: 70px;
+    .uber-uns-ul-and-img__img {
+        grid-area: block04;
+    }
+    .uber-uns-ul-and-img__points {
+        width: 100%;
+
+
+    }
+    ul {
+        width: 100%;
+        grid-area: block03;
+    }
+    .uber-uns-ul-and-img__block-wrapper {
+        display: grid;
+        grid-template-areas: "block01 block04"
+                             "block02 block04"
+
+                             "block03 block04";
+        grid-column-gap: 11.9%;
+
+    }
+    .uber-uns-ul-and-img_01 {
+        grid-area: block01;
+
+    }
+    .uber-uns-ul-and-img_02 {
+        grid-area: block02;
+
+    }
+}
+
+.details {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 48px;
+    &__item {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        img {
+            margin-right: 30px;
+        }
+    }
+    &_wide {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 48px;
+        &__item {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+            img {
+                margin-right: 0px;
+                margin-left: 30px;
+            }
+            div {
+                max-width: 669px;
+            }
+        }
+    }
+}
+
+.michel {
+    margin-top: -70px;
+}
+
+.kundenbewertungen {
+    margin-bottom: -70px;
+}
+
+@media (max-width: 1024px) {
+    
+    .uber-uns-ul-and-img {
+
+        img {
+            margin: 0 0 16px 16px;
+            width: 324px;
+        }
+
+    }
+
+    .uber-uns-descr {
+        margin-bottom: -50px;
+        &__wrapper {
+            grid-template-areas: "block4 block1"
+                                 "block2 block2"
+                                 "block3 block3";
+            &_3 {
+                margin-bottom: 20px;
+            }
+            &_2 {
+                margin-bottom: 20px;
+            }
+            &_1 {
+                margin-bottom: 20px;
+            }
+            img {
+                width: 324px;
+            }
+        }
+    } 
+    .hr-template {
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+    .uber-uns-ul-and-img {
+        h3 {
+           font-size: 24px;
+        }
+        
+        .uber-uns-ul-and-img__img {
+            grid-area: block04;
+        }
+        margin-bottom: 70px;
+        .uber-uns-ul-and-img__block-wrapper {
+            grid-gap: 0;
+            grid-template-areas: "block01 block04"
+                                 "block02 block02"
+                                 "block03 block03";
+
+        }
+    }
+    .details {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+        &__item {
+            position: relative;
+            h3 {
+                top: 0;
+                font-size: 24px;
+                position: absolute;
+            }
+            img {
+                margin-top: 80px;
+                width: 100%;
+            }
+            justify-content: unset;
+            flex-direction: column;
+            width: unset;
+        }
+        &_wide {
+            &__item {
+                h3 {
+                    font-size: 24px;
+                }
+                img {
+                    display: none;
+                }
+                div {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+    .michel {
+        margin-top: -40px;
+    }
+    
+    .kundenbewertungen {
+        margin-bottom: -100px;
+    }
+    
+}
+
+@media (max-width: 767px) {
+    .uber-uns-descr {
+        &__wrapper {
+            grid-template-columns: 1fr;
+            grid-template-areas:    "block4"
+                                    "block1"
+                                    "block2"
+                                    "block3";
+            &_1 {
+                max-width: 100%;
+                grid-area: block1;
+            }
+            &_2 {
+                max-width: 100%;
+                grid-area: block2;
+            }
+            &_3 {
+                max-width: 100%;
+                grid-area: block3;
+            }
+            &_4 {
+                width: 100%;
+                max-width: 100%;
+                grid-area: block4;
+                img {
+                    width: 100%;
+                    max-width: 100%;
+                }
+            }
+            img {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .uber-uns-ul-and-img {
+        h2 {
+        }
+        h3 {
+        }
+        ul {
+            li {
+                &:before {
+                }
+            }
+        }
+        .uber-uns-ul-and-img__img {
+            width: 100%;
+            img {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+        .uber-uns-ul-and-img__points {
+        }
+        ul {
+        }
+        .uber-uns-ul-and-img__block-wrapper {
+            grid-template-areas: "block04"
+                                 "block01"
+                                 "block02"
+                                 "block03";
+        }
+    }
+    
+}
+
+@media (max-width: 576px) {
+    .uber-uns-ul-and-img {
+        ul {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            li {
+                margin-left: 15px;
+            }
+        }
+    }
+    .details {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr ;
+        &__item {
+            h3 {
+                font-size: 16px;
+            }
+            img {
+                margin-top: 60px;
+                margin-bottom: 20px;
+            }
+        }
+        &_wide {
+            &__item {
+                h3 {
+                    font-size: 24px;
+                }
+                img {
+                    display: none;
+                }
+                div {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+    .analyse {
+        margin-top: 100px;
+        button {
+            margin-top: 16px;
+        }
+    }
+    .kundenbewertungen {
+        padding-bottom: 30px;
+    }
+}
